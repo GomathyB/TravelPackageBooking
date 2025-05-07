@@ -1,13 +1,15 @@
-package com.example.demo;
+package com.cts;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-public class ReviewApplication {
+@EnableFeignClients
+public class PaymentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ReviewApplication.class, args);
+		SpringApplication.run(PaymentApplication.class, args);
 	}
 
 }
