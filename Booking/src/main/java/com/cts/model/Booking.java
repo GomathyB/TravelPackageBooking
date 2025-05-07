@@ -27,6 +27,7 @@ public class Booking {
 	private LocalDate endDate;
 	private String status;
 	private int paymentId;
+	private int noOfPeople;
 	private int userId;
 	
 }

@@ -31,7 +31,7 @@ public class UserRoles {
 	private int userId;
 	// Validations for every fields
 	@NotBlank(message = "Name is mandatory")
-	@Size(min = 2, max = 70, message = "Name msut be between 2 and 70 characters")
+	@Size(min = 2, max = 70, message = "Name must be between 2 and 70 characters")
 	private String name;
 	@NotBlank(message = "Email is mandatory")
 	@Email(message = "Provide a valid Email")

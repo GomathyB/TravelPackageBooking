@@ -12,7 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cts.dto.BookingPackageResponse;
+import com.cts.dto.BookingUserResponse;
 import com.cts.exception.BookingIdNotFoundException;
+import com.cts.exception.PackageNotFoundException;
+import com.cts.exception.UserNotFoundException;
 import com.cts.model.Booking;
 import com.cts.service.BookingServiceImpl;
 
@@ -23,7 +27,7 @@ public class BookingController {
 	BookingServiceImpl service;
 
 	@PostMapping("/addBooking")
-	public String addBooking(@RequestBody Booking booking) {
+	public String addBooking(@RequestBody Booking booking) throws PackageNotFoundException {
 		return service.addBooking(booking);
 	}
 
@@ -43,8 +47,19 @@ public class BookingController {
 	}
 	
 	@PutMapping("/updateBooking")
-	public String  updateBooking(Booking booking)
+	public String  updateBooking(@RequestBody Booking booking)
 	{
 		return service.updateBooking(booking);
 	}
+	@GetMapping("/viewUserByBookingId/{bid}")
+	public BookingUserResponse viewUserByBookingId(@PathVariable("bid")int bookingId) throws UserNotFoundException
+	{
+		return service.viewUserByBookingId(bookingId);
+	}
+	@GetMapping("/viewPackageByBookingId/{bid}")
+	public BookingPackageResponse viewPackageByBookingId(@PathVariable("bid")int bookingId) throws UserNotFoundException, PackageNotFoundException
+	{
+		return service.viewPackageByBookingId(bookingId);
+	}
+	
 }

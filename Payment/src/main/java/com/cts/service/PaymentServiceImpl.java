@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import com.cts.dto.Booking;
 import com.cts.exception.BookingIdNotFoundException;
 import com.cts.exception.PaymentIdNotFoundException;
-import com.cts.feignClient.BookingClient;
+import com.cts.feignclient.BookingClient;
 import com.cts.model.Payment;
 import com.cts.repository.PaymentRepository;
 
@@ -29,7 +29,6 @@ public class PaymentServiceImpl implements PaymentService {
 		int bookingId = payment.getBookingId();
 		
 		Booking booked = bookingClient.viewBookingById(bookingId);
-		//System.out.println(booked);
 		if (booked == null)
 			throw new BookingIdNotFoundException("Booking is not done ");
 		else {
