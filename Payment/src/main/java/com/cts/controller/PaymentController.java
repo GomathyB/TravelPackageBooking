@@ -14,13 +14,15 @@ import com.cts.exception.BookingIdNotFoundException;
 import com.cts.exception.PaymentIdNotFoundException;
 import com.cts.model.Payment;
 import com.cts.service.PaymentService;
+
+import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/payment")
 public class PaymentController {
 	@Autowired
 	PaymentService service;
 	@PostMapping("/addPayment")
-	public String addPayment(@RequestBody Payment payment) throws BookingIdNotFoundException
+	public String addPayment(@Valid @RequestBody Payment payment) throws BookingIdNotFoundException
 	{
 		return service.addPayment(payment);
 	}

@@ -16,28 +16,30 @@ import com.cts.exception.PackageNotFoundException;
 import com.cts.model.TravelPackage;
 import com.cts.service.TravelPackageService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/travelPackage")
 public class TravelPackageController {
 	@Autowired
 	TravelPackageService service;
 	@PostMapping("/addpackage")
-	public String addPackage(@RequestBody TravelPackage travelPackage)
+	public String addPackage(@Valid @RequestBody TravelPackage travelPackage)
 	{
 		return service.addPackage(travelPackage);
 	}
 	@PutMapping("/updatePackage")
-	public String updatePackage(@RequestBody TravelPackage travelPackage)
+	public String updatePackage(@Valid @RequestBody TravelPackage travelPackage)
 	{
 		return service.updatePackage(travelPackage);
 	}
 	@DeleteMapping("/deletePackageById/{pid}")
-	public String deletePackageById(@PathVariable("pid") int packageId)
+	public String deletePackageById( @PathVariable("pid") int packageId)
 	{
 		return service.deletePackageById(packageId);
 	}
 	@GetMapping("/viewPackageById/{pid}")
-	public TravelPackage viewPackageById(@PathVariable("pid") int  packageId)throws PackageNotFoundException
+	public TravelPackage viewPackageById( @PathVariable("pid") int  packageId)throws PackageNotFoundException
 	{
 		return service.viewPackageById(packageId);
 	}

@@ -20,6 +20,8 @@ import com.cts.exception.UserNotFoundException;
 import com.cts.model.Booking;
 import com.cts.service.BookingServiceImpl;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/booking")
 public class BookingController {
@@ -27,7 +29,7 @@ public class BookingController {
 	BookingServiceImpl service;
 
 	@PostMapping("/addBooking")
-	public String addBooking(@RequestBody Booking booking) throws PackageNotFoundException {
+	public String addBooking(@Valid @RequestBody Booking booking) throws PackageNotFoundException {
 		return service.addBooking(booking);
 	}
 
@@ -47,7 +49,7 @@ public class BookingController {
 	}
 	
 	@PutMapping("/updateBooking")
-	public String  updateBooking(@RequestBody Booking booking)
+	public String  updateBooking(@Valid @RequestBody Booking booking)
 	{
 		return service.updateBooking(booking);
 	}

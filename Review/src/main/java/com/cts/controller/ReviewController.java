@@ -16,13 +16,15 @@ import com.cts.exception.ReviewNotFoundException;
 import com.cts.exception.UserNotFoundException;
 import com.cts.model.Review;
 import com.cts.service.ReviewService;
+
+import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/review")
 public class ReviewController {
 	@Autowired
 	ReviewService service;
 	@PostMapping("/addReview")
-	public String addReview(@RequestBody Review review)
+	public String addReview(@Valid @RequestBody Review review)
 	{
 		return service.addReview(review);
 	}
