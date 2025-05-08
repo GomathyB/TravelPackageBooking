@@ -48,10 +48,17 @@ public class UserRolesServiceImpl implements UserRolesService {
 	@Override
 	public UserRoles viewUserById(int userId) throws UserNotFoundException {
 		Optional<UserRoles> optional = repository.findById(userId);
+		log.info("Searching for a user's details");
 		if (optional.isPresent())
+		{
+			log.info("User details found");
 			return optional.get(); // Displaying the existing user
+		}
 		else
+		{
+			log.info("User details not found!! UserId invalid");
 			throw new UserNotFoundException("User ID is invalid"); // When invalid ID is passed, the exception is thrown
+		}
 	}
 
 }

@@ -65,11 +65,18 @@ public class BookingServiceImpl implements BookingService {
 
 	@Override
 	public Booking viewBookingById(int bookingId) throws BookingIdNotFoundException {
+		log.info("Searching for booking details");
 		Optional<Booking> optional = repository.findById(bookingId);
-		if (optional.isPresent())
+		if (optional.isPresent()) 
+		{
+			log.info("Booking details found!!");
 			return optional.get(); // Displaying the existing package
+		}
 		else
+		{
+			log.info("Booking details not found!! Booking ID is invalid");
 			throw new BookingIdNotFoundException("Booking ID is invalid");
+		}
 	}
 
 	@Override

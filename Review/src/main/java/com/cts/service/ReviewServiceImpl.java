@@ -44,10 +44,17 @@ public class ReviewServiceImpl implements ReviewService{
 	@Override
 	public Review viewReviewById(int reviewId) throws ReviewNotFoundException{
 		Optional<Review> optional = repository.findById(reviewId);
+		log.info("Seaching for  a review");
 		if (optional.isPresent())
+		{
+			log.info("Review details found");
 			return optional.get(); // Displaying the existing package
+		}
 		else
+		{
+			log.info("Review details not found!! Review ID is invalid");
 			throw new ReviewNotFoundException("Review ID is invalid");
+		}
 	}
 
 	@Override
@@ -57,6 +64,8 @@ public class ReviewServiceImpl implements ReviewService{
 
 	@Override
 	public ReviewUserDTOResponse viewUserById(int reviewId) throws UserNotFoundException {
+		log.info("Seaching for  a review");
+		log.info("Review details found");
 		Review review=repository.findById(reviewId).get();
 		int userId=review.getUserId();
 		UserRoles user=userClient.viewUserById(userId);

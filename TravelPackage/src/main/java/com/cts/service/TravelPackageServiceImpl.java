@@ -8,13 +8,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cts.dto.Review;
 import com.cts.exception.PackageNotFoundException;
+import com.cts.feignClient.ReviewClient;
 import com.cts.model.TravelPackage;
 import com.cts.repository.TravelPackageRepository;
+
 @Service
 public class TravelPackageServiceImpl implements TravelPackageService {
 	@Autowired
 	TravelPackageRepository repository;
+
+	@Autowired
+	ReviewClient reviewClient;
 	Logger log = LoggerFactory.getLogger(TravelPackageServiceImpl.class);
 
 	@Override
@@ -39,18 +45,34 @@ public class TravelPackageServiceImpl implements TravelPackageService {
 
 	@Override
 	public String deletePackageById(int packageId) {
+		boolean deleted = false;
+		List<Review> reviews = reviewClient.viewAllReview();
+		for (Review review : reviews) {
+			if (review.getPackageId() == packageId) {
+				deleted = true;
+				reviewClient.deleteReview(review.getReviewId());
+			}
+		}
 		repository.deleteById(packageId);
-		log.info("A Travel package is deleted"); // Log message for deleting existing package
-		return "Travel Package deleted successfully!!!";
+		if (deleted) {
+			return "Package along with reviews deleted";
+		} else {
+			log.info("A Travel package is deleted"); // Log message for deleting existing package
+			return "Travel Package deleted successfully and no reviews for the package!!!";
+		}
 	}
 
 	@Override
 	public TravelPackage viewPackageById(int packageId) throws PackageNotFoundException {
+		log.info("Searching for a Traevl Package");
 		Optional<TravelPackage> optional = repository.findById(packageId);
-		if (optional.isPresent())
+		if (optional.isPresent()) {
+			log.info("Traevl Package found!!");
 			return optional.get(); // Displaying the existing package
-		else
+		} else {
+			log.info("Traevl Package not found!! ID is invalid");
 			throw new PackageNotFoundException("Travel Package ID is invalid");
+		}
 	}
 
 	@Override

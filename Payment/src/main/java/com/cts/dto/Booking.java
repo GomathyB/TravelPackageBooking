@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class Booking {
 	private int bookingId;
 	private int packageId;
@@ -17,4 +16,5 @@ public class Booking {
 	private String status;
 	private int paymentId;
 	private int userId;
+	private int noOfPeople;
 }

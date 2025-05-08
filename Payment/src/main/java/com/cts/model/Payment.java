@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -26,7 +26,7 @@ public class Payment {
 	private int amount;
 	@Pattern(regexp = "^(paid)$", message = "The staus should be paid")
 	private String status;
-	@NotNull(message="The method is not filled")
+	@NotBlank(message="The method is not filled")
 	@Size(min = 6, message = "The payment method should be atleast 6 characters")
 	private String paymentMethod;
 	private int userId;

@@ -1268,3 +1268,885 @@ Caused by: java.lang.ClassNotFoundException: BookingNotFoundException
 2025-05-08T11:08:10.732+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-08T11:08:15.737+05:30  INFO 27764 --- [Booking] [http-nio-4004-exec-10] com.cts.service.BookingServiceImpl       : New Booking is added
 2025-05-08T11:09:12.215+05:30  WARN 27764 --- [Booking] [http-nio-4004-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$NotAcceptable: [406] during [GET] to [http://TRAVELPACKAGE/travelPackage/viewPackageById/3] [TravelPackageClient#viewPackageById(int)]: [{"status":404,"message":"Travel Package ID is invalid","time":"2025-05-08T11:09:12.2022946"}]]
+2025-05-08T11:28:46.439+05:30  WARN 27764 --- [Booking] [HikariPool-15 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Thread starvation or clock leap detected (housekeeper delta=18m8s153ms163µs).
+2025-05-08T11:30:48.900+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T11:35:48.902+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T11:40:48.916+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T11:45:48.931+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T11:50:48.932+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T11:54:14.830+05:30  INFO 27764 --- [Booking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-08T11:54:14.831+05:30  INFO 27764 --- [Booking] [Thread-84] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKING with eureka with status DOWN
+2025-05-08T11:54:14.831+05:30  INFO 27764 --- [Booking] [Thread-84] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746685454831, current=DOWN, previous=UP]
+2025-05-08T11:54:14.831+05:30  INFO 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T11:54:14.835+05:30  INFO 27764 --- [Booking] [Thread-84] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T11:54:14.838+05:30  INFO 27764 --- [Booking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T11:54:14.841+05:30  INFO 27764 --- [Booking] [Thread-84] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T11:54:14.842+05:30  INFO 27764 --- [Booking] [Thread-84] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2025-05-08T11:54:14.847+05:30  INFO 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T11:54:14.854+05:30  INFO 27764 --- [Booking] [Thread-84] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2025-05-08T11:54:14.854+05:30  INFO 27764 --- [Booking] [Thread-84] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-08T11:54:17.865+05:30  INFO 27764 --- [Booking] [Thread-84] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-08T11:54:17.882+05:30  INFO 27764 --- [Booking] [Thread-84] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - deregister  status: 200
+2025-05-08T11:54:17.882+05:30  INFO 27764 --- [Booking] [Thread-84] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-08T11:54:18.859+05:30  INFO 27764 --- [Booking] [restartedMain] com.cts.BookingApplication               : Starting BookingApplication using Java 21.0.6 with PID 27764 (C:\Users\2401069\git\TravelPackageBooking\Booking\target\classes started by 2401069 in C:\Users\2401069\git\TravelPackageBooking\Booking)
+2025-05-08T11:54:18.860+05:30  INFO 27764 --- [Booking] [restartedMain] com.cts.BookingApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T11:54:18.861+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-08T11:54:18.861+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=Booking, profiles=[default], label=null, version=767bc270dd63bcb8401aeccf5f8e6e9df6854b18, state=
+2025-05-08T11:54:19.187+05:30  INFO 27764 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08T11:54:19.198+05:30  INFO 27764 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2025-05-08T11:54:19.269+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c007005f-cdc3-3c4e-9d7a-a40881aaf0b8
+2025-05-08T11:54:19.518+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4004 (http)
+2025-05-08T11:54:19.528+05:30  INFO 27764 --- [Booking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T11:54:19.528+05:30  INFO 27764 --- [Booking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T11:54:19.577+05:30  INFO 27764 --- [Booking] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-08T11:54:19.577+05:30  INFO 27764 --- [Booking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 716 ms
+2025-05-08T11:54:19.726+05:30  INFO 27764 --- [Booking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-08T11:54:19.728+05:30  INFO 27764 --- [Booking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-08T11:54:19.733+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08T11:54:19.734+05:30  INFO 27764 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2025-05-08T11:54:19.745+05:30  INFO 27764 --- [Booking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24d37931
+2025-05-08T11:54:19.745+05:30  INFO 27764 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2025-05-08T11:54:19.746+05:30  WARN 27764 --- [Booking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08T11:54:19.746+05:30  INFO 27764 --- [Booking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-16)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-08T11:54:19.779+05:30  INFO 27764 --- [Booking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-08T11:54:19.790+05:30  INFO 27764 --- [Booking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T11:54:19.873+05:30  WARN 27764 --- [Booking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08T11:54:19.904+05:30  WARN 27764 --- [Booking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-08T11:54:19.922+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'TRAVELPACKAGE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T11:54:19.941+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERROLES' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T11:54:20.356+05:30  INFO 27764 --- [Booking] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-08T11:54:20.398+05:30  INFO 27764 --- [Booking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-08T11:54:20.419+05:30  WARN 27764 --- [Booking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-08T11:54:20.429+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-08T11:54:20.458+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-08T11:54:20.461+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-08T11:54:20.482+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-08T11:54:20.482+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-08T11:54:20.482+05:30  INFO 27764 --- [Booking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-08T11:54:20.483+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746685460483 with initial instances count: 5
+2025-05-08T11:54:20.487+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING with eureka with status UP
+2025-05-08T11:54:20.488+05:30  INFO 27764 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746685460487, current=UP, previous=STARTING]
+2025-05-08T11:54:20.488+05:30  INFO 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T11:54:20.491+05:30  INFO 27764 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4004 (http) with context path '/'
+2025-05-08T11:54:20.491+05:30  INFO 27764 --- [Booking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4004
+2025-05-08T11:54:20.496+05:30  INFO 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T11:54:20.501+05:30  INFO 27764 --- [Booking] [restartedMain] com.cts.BookingApplication               : Started BookingApplication in 2.493 seconds (process running for 5259.963)
+2025-05-08T11:54:20.502+05:30  INFO 27764 --- [Booking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-08T12:02:05.903+05:30  WARN 27764 --- [Booking] [HikariPool-16 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Thread starvation or clock leap detected (housekeeper delta=6m46s33ms517µs800ns).
+2025-05-08T12:05:36.496+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:10:36.500+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:15:36.505+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:20:36.510+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:25:36.518+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:30:36.527+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:35:36.531+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:40:36.541+05:30  INFO 27764 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:41:49.192+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-08T12:41:49.193+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKING with eureka with status DOWN
+2025-05-08T12:41:49.193+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746688309193, current=DOWN, previous=UP]
+2025-05-08T12:41:49.194+05:30  INFO 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T12:41:49.196+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T12:41:49.203+05:30  INFO 27764 --- [Booking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T12:41:49.213+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T12:41:49.214+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2025-05-08T12:41:49.221+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2025-05-08T12:41:49.222+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-08T12:41:49.263+05:30  INFO 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/BOOKING": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/BOOKING": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 21 more
+
+2025-05-08T12:41:49.264+05:30  WARN 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/BOOKING": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-08T12:41:49.297+05:30  INFO 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/BOOKING": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/BOOKING": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 22 more
+
+2025-05-08T12:41:49.297+05:30  WARN 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/BOOKING": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-08T12:41:49.297+05:30  WARN 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-08T12:41:49.299+05:30  WARN 27764 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-08T12:41:49.302+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-08T12:41:49.330+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/BOOKING/LTIN603872.cts.com:Booking:4004": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/BOOKING/LTIN603872.cts.com:Booking:4004": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:926)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:906)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:841)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:702)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:100)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:183)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$2(RestTemplateTransportClientFactory.java:145)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:900)
+	... 69 more
+
+2025-05-08T12:41:49.330+05:30  WARN 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/BOOKING/LTIN603872.cts.com:Booking:4004": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-08T12:41:49.331+05:30 ERROR 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.2.1.jar:4.2.1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.2.1.jar:4.2.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:796) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:746) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1473) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:705) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1466) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160) ~[spring-boot-3.4.5.jar:3.4.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-08T12:41:49.332+05:30  INFO 27764 --- [Booking] [RMI TCP Connection(167)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-08T12:56:06.956+05:30  INFO 356 --- [Booking] [restartedMain] com.cts.BookingApplication               : Starting BookingApplication using Java 21.0.6 with PID 356 (C:\Users\2401069\git\TravelPackageBooking\Booking\target\classes started by 2401069 in C:\Users\2401069\git\TravelPackageBooking\Booking)
+2025-05-08T12:56:06.957+05:30  INFO 356 --- [Booking] [restartedMain] com.cts.BookingApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T12:56:07.017+05:30  INFO 356 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-08T12:56:07.017+05:30  INFO 356 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=Booking, profiles=[default], label=null, version=767bc270dd63bcb8401aeccf5f8e6e9df6854b18, state=
+2025-05-08T12:56:07.020+05:30  INFO 356 --- [Booking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-08T12:56:07.020+05:30  INFO 356 --- [Booking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-08T12:56:08.790+05:30  INFO 356 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08T12:56:08.919+05:30  INFO 356 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2025-05-08T12:56:09.196+05:30  INFO 356 --- [Booking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c007005f-cdc3-3c4e-9d7a-a40881aaf0b8
+2025-05-08T12:56:09.874+05:30  INFO 356 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4004 (http)
+2025-05-08T12:56:09.890+05:30  INFO 356 --- [Booking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T12:56:09.890+05:30  INFO 356 --- [Booking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T12:56:09.986+05:30  INFO 356 --- [Booking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T12:56:09.986+05:30  INFO 356 --- [Booking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2965 ms
+2025-05-08T12:56:10.353+05:30  INFO 356 --- [Booking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-08T12:56:10.406+05:30  INFO 356 --- [Booking] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-08T12:56:10.438+05:30  INFO 356 --- [Booking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-08T12:56:10.700+05:30  INFO 356 --- [Booking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08T12:56:10.729+05:30  INFO 356 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-08T12:56:11.100+05:30  INFO 356 --- [Booking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a63b4b3
+2025-05-08T12:56:11.105+05:30  INFO 356 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-08T12:56:11.201+05:30  WARN 356 --- [Booking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08T12:56:11.220+05:30  INFO 356 --- [Booking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-08T12:56:11.957+05:30  INFO 356 --- [Booking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-08T12:56:12.116+05:30  INFO 356 --- [Booking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T12:56:12.428+05:30  WARN 356 --- [Booking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08T12:56:12.503+05:30  WARN 356 --- [Booking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-08T12:56:12.546+05:30  INFO 356 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'TRAVELPACKAGE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T12:56:12.601+05:30  INFO 356 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERROLES' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T12:56:13.408+05:30  INFO 356 --- [Booking] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-08T12:56:13.491+05:30  INFO 356 --- [Booking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-08T12:56:13.535+05:30  WARN 356 --- [Booking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-08T12:56:13.557+05:30  INFO 356 --- [Booking] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-08T12:56:13.643+05:30  INFO 356 --- [Booking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-08T12:56:13.670+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-08T12:56:13.674+05:30  INFO 356 --- [Booking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T12:56:13.683+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-08T12:56:13.683+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-08T12:56:13.683+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-08T12:56:13.683+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-08T12:56:13.683+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-08T12:56:13.683+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-08T12:56:13.684+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-08T12:56:13.900+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-08T12:56:13.902+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-08T12:56:13.904+05:30  INFO 356 --- [Booking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-08T12:56:13.905+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746689173905 with initial instances count: 1
+2025-05-08T12:56:13.913+05:30  INFO 356 --- [Booking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING with eureka with status UP
+2025-05-08T12:56:13.914+05:30  INFO 356 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746689173914, current=UP, previous=STARTING]
+2025-05-08T12:56:13.916+05:30  INFO 356 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T12:56:13.938+05:30  INFO 356 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4004 (http) with context path '/'
+2025-05-08T12:56:13.938+05:30  INFO 356 --- [Booking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4004
+2025-05-08T12:56:13.952+05:30  INFO 356 --- [Booking] [restartedMain] com.cts.BookingApplication               : Started BookingApplication in 8.705 seconds (process running for 9.602)
+2025-05-08T12:56:13.954+05:30  INFO 356 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T12:56:14.366+05:30  INFO 356 --- [Booking] [RMI TCP Connection(10)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T12:56:14.366+05:30  INFO 356 --- [Booking] [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T12:56:14.367+05:30  INFO 356 --- [Booking] [RMI TCP Connection(10)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-08T13:58:02.888+05:30  WARN 356 --- [Booking] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h1m21s659ms232µs800ns).
+2025-05-08T14:02:05.343+05:30  INFO 356 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:04:21.850+05:30  INFO 356 --- [Booking] [http-nio-4004-exec-1] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:04:21.944+05:30  INFO 356 --- [Booking] [http-nio-4004-exec-1] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:04:22.196+05:30  WARN 356 --- [Booking] [http-nio-4004-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String com.cts.controller.BookingController.updateBooking(com.cts.model.Booking): [Field error in object 'booking' on field 'noOfPeople': rejected value [0]; codes [Min.booking.noOfPeople,Min.noOfPeople,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.noOfPeople,noOfPeople]; arguments []; default message [noOfPeople],1]; default message [The minimum number of people for booking should be atleast 1]] ]
+2025-05-08T14:04:59.985+05:30  INFO 356 --- [Booking] [http-nio-4004-exec-3] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:04:59.992+05:30  INFO 356 --- [Booking] [http-nio-4004-exec-3] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:05:00.037+05:30  WARN 356 --- [Booking] [http-nio-4004-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String com.cts.controller.BookingController.updateBooking(com.cts.model.Booking): [Field error in object 'booking' on field 'noOfPeople': rejected value [0]; codes [Min.booking.noOfPeople,Min.noOfPeople,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.noOfPeople,noOfPeople]; arguments []; default message [noOfPeople],1]; default message [The minimum number of people for booking should be atleast 1]] ]
+2025-05-08T14:05:27.436+05:30  WARN 356 --- [Booking] [http-nio-4004-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [feign.FeignException$BadRequest: [400] during [PUT] to [http://TRAVELPACKAGE/travelPackage/updatePackage] [TravelPackageClient#updatePackage(TravelPackage)]: [{"availability":"The availability should be at least 5","timestamp":"2025-05-08T08:35:27.416+00:00"}]]
+2025-05-08T14:06:04.326+05:30  INFO 356 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : New Booking is added
+2025-05-08T14:06:39.657+05:30  INFO 356 --- [Booking] [http-nio-4004-exec-10] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:06:39.661+05:30  INFO 356 --- [Booking] [http-nio-4004-exec-10] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:06:39.703+05:30  WARN 356 --- [Booking] [http-nio-4004-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String com.cts.controller.BookingController.updateBooking(com.cts.model.Booking): [Field error in object 'booking' on field 'noOfPeople': rejected value [0]; codes [Min.booking.noOfPeople,Min.noOfPeople,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.noOfPeople,noOfPeople]; arguments []; default message [noOfPeople],1]; default message [The minimum number of people for booking should be atleast 1]] ]
+2025-05-08T14:07:05.344+05:30  INFO 356 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:07:56.571+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-08T14:07:56.572+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKING with eureka with status DOWN
+2025-05-08T14:07:56.573+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746693476573, current=DOWN, previous=UP]
+2025-05-08T14:07:56.573+05:30  INFO 356 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T14:07:56.578+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T14:07:56.588+05:30  INFO 356 --- [Booking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T14:07:56.598+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T14:07:56.603+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-08T14:07:56.611+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-08T14:07:56.612+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-08T14:07:56.782+05:30  INFO 356 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T14:07:56.783+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-08T14:07:56.800+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - deregister  status: 200
+2025-05-08T14:07:56.801+05:30  INFO 356 --- [Booking] [RMI TCP Connection(22)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-08T14:08:34.889+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : Starting BookingApplication using Java 21.0.6 with PID 16836 (C:\Users\2401069\git\TravelPackageBooking\Booking\target\classes started by 2401069 in C:\Users\2401069\git\TravelPackageBooking\Booking)
+2025-05-08T14:08:34.892+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T14:08:34.960+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-08T14:08:34.961+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=Booking, profiles=[default], label=null, version=767bc270dd63bcb8401aeccf5f8e6e9df6854b18, state=
+2025-05-08T14:08:34.965+05:30  INFO 16836 --- [Booking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-08T14:08:34.966+05:30  INFO 16836 --- [Booking] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-08T14:08:37.228+05:30  INFO 16836 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08T14:08:37.473+05:30  INFO 16836 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 228 ms. Found 1 JPA repository interface.
+2025-05-08T14:08:37.968+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c007005f-cdc3-3c4e-9d7a-a40881aaf0b8
+2025-05-08T14:08:39.141+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4004 (http)
+2025-05-08T14:08:39.161+05:30  INFO 16836 --- [Booking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T14:08:39.162+05:30  INFO 16836 --- [Booking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T14:08:39.314+05:30  INFO 16836 --- [Booking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T14:08:39.315+05:30  INFO 16836 --- [Booking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4348 ms
+2025-05-08T14:08:39.790+05:30  INFO 16836 --- [Booking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-08T14:08:39.878+05:30  INFO 16836 --- [Booking] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-08T14:08:39.928+05:30  INFO 16836 --- [Booking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-08T14:08:40.314+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08T14:08:40.364+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-08T14:08:40.784+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44afa6ad
+2025-05-08T14:08:40.786+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-08T14:08:40.876+05:30  WARN 16836 --- [Booking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08T14:08:40.901+05:30  INFO 16836 --- [Booking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-08T14:08:42.630+05:30  INFO 16836 --- [Booking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-08T14:08:42.771+05:30  INFO 16836 --- [Booking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T14:08:43.459+05:30  WARN 16836 --- [Booking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08T14:08:43.635+05:30  WARN 16836 --- [Booking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-08T14:08:43.770+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'TRAVELPACKAGE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T14:08:43.927+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERROLES' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T14:08:46.000+05:30  INFO 16836 --- [Booking] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-08T14:08:46.225+05:30  INFO 16836 --- [Booking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-08T14:08:46.333+05:30  WARN 16836 --- [Booking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-08T14:08:46.387+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-08T14:08:46.591+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-08T14:08:46.649+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-08T14:08:46.659+05:30  INFO 16836 --- [Booking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:08:46.680+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-08T14:08:46.681+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-08T14:08:46.681+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-08T14:08:46.681+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-08T14:08:46.681+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-08T14:08:46.681+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-08T14:08:46.682+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-08T14:08:47.486+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-08T14:08:47.489+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-08T14:08:47.494+05:30  INFO 16836 --- [Booking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-08T14:08:47.498+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746693527497 with initial instances count: 0
+2025-05-08T14:08:47.516+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING with eureka with status UP
+2025-05-08T14:08:47.518+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746693527518, current=UP, previous=STARTING]
+2025-05-08T14:08:47.522+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T14:08:47.573+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4004 (http) with context path '/'
+2025-05-08T14:08:47.575+05:30  INFO 16836 --- [Booking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4004
+2025-05-08T14:08:47.610+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : Started BookingApplication in 20.236 seconds (process running for 21.334)
+2025-05-08T14:08:47.807+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T14:08:48.297+05:30  INFO 16836 --- [Booking] [RMI TCP Connection(7)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T14:08:48.297+05:30  INFO 16836 --- [Booking] [RMI TCP Connection(7)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T14:08:48.300+05:30  INFO 16836 --- [Booking] [RMI TCP Connection(7)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-08T14:09:17.496+05:30  INFO 16836 --- [Booking] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-08T14:09:17.496+05:30  INFO 16836 --- [Booking] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-08T14:09:17.496+05:30  INFO 16836 --- [Booking] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-08T14:09:17.496+05:30  INFO 16836 --- [Booking] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-08T14:09:17.496+05:30  INFO 16836 --- [Booking] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-08T14:09:17.496+05:30  INFO 16836 --- [Booking] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-05-08T14:09:17.496+05:30  INFO 16836 --- [Booking] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-08T14:09:17.549+05:30  INFO 16836 --- [Booking] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-08T14:09:36.423+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-3] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:09:36.456+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-3] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:09:36.828+05:30  WARN 16836 --- [Booking] [http-nio-4004-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String com.cts.controller.BookingController.updateBooking(com.cts.model.Booking): [Field error in object 'booking' on field 'noOfPeople': rejected value [0]; codes [Min.booking.noOfPeople,Min.noOfPeople,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.noOfPeople,noOfPeople]; arguments []; default message [noOfPeople],1]; default message [The minimum number of people for booking should be atleast 1]] ]
+2025-05-08T14:10:16.140+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-5] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:10:16.148+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-5] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:10:16.260+05:30  WARN 16836 --- [Booking] [http-nio-4004-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String com.cts.controller.BookingController.updateBooking(com.cts.model.Booking): [Field error in object 'booking' on field 'noOfPeople': rejected value [0]; codes [Min.booking.noOfPeople,Min.noOfPeople,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.noOfPeople,noOfPeople]; arguments []; default message [noOfPeople],1]; default message [The minimum number of people for booking should be atleast 1]] ]
+2025-05-08T14:10:32.677+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:10:32.690+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:10:32.787+05:30  WARN 16836 --- [Booking] [http-nio-4004-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.String com.cts.controller.BookingController.updateBooking(com.cts.model.Booking): [Field error in object 'booking' on field 'noOfPeople': rejected value [0]; codes [Min.booking.noOfPeople,Min.noOfPeople,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [booking.noOfPeople,noOfPeople]; arguments []; default message [noOfPeople],1]; default message [The minimum number of people for booking should be atleast 1]] ]
+2025-05-08T14:13:46.689+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:14:21.892+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-10] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x030x010xf40x010x000x010xf00x030x030xef|v0x090x040xd20xc30xa8:70xa4v0xa70xcb0xb9`w0xd50xef0x10&_0x09F0x940x06R0xb80x0eBD0x100x000x01|0x000x000x000x010x000x020x000x030x000x040x000x050x000x060x000x070x000x080x000x090x000x0a0x000x0b0x000x0c0x000x0d0x000x0e0x000x0f0x000x100x000x110x000x120x000x130x000x140x000x150x000x160x000x170x000x180x000x190x000x1a0x000x1b0x00/0x0000x0010x0020x0030x0040x0050x0060x0070x0080x0090x00:0x00;0x00<0x00=0x00>0x00?0x00@0x00A0x00B0x00C0x00D0x00E0x00F0x00g0x00h0x00i0x00j0x00k0x00l0x00m0x000x840x000x850x000x860x000x870x000x880x000x890x000x960x000x970x000x980x000x990x000x9a0x000x9b0x000x9c0x000x9d0x000x9e0x000x9f0x000xa00x000xa10x000xa20x000xa30x000xa40x000xa50x000xa60x000xa70x000xba0x000xbb0x000xbc0x000xbd0x000xbe0x000xbf0x000xc00x000xc10x000xc20x000xc30x000xc40x000xc50x130x010x130x020x130x030x130x040x130x050xc00x010xc00x020xc00x030xc00x040xc00x050xc00x060xc00x070xc00x080xc00x090xc00x0a0xc00x0b0xc00x0c0xc00x0d0xc00x0e0xc00x0f0xc00x100xc00x110xc00x120xc00x130xc00x140xc00x150xc00x160xc00x170xc00x180xc00x190xc0#0xc0$0xc0%0xc0&0xc0'0xc0(0xc0)0xc0*0xc0+0xc0,0xc0-0xc0.0xc0/0xc000xc010xc020xc0r0xc0s0xc0t0xc0u0xc0v0xc0w0xc0x0xc0y0xc0z0xc0{0xc0|0xc0}0xc0~0xc00x7f0xc00x800xc00x810xc00x820xc00x830xc00x840xc00x850xc00x860xc00x870xc00x880xc00x890xc00x8a0xc00x8b0xc00x8c0xc00x8d0xc00x8e0xc00x8f0xc00x900xc00x910xc00x920xc00x930xc00x940xc00x950xc00x960xc00x970xc00x980xc00x990xc00x9a0xc00x9b0xcc0xa80xcc0xa90xcc0xaa0xcc0xab0xcc0xac0xcc0xad0xcc0xae0x020x000x010x00J0x000x0a0x000x0a0x000x080x000x170x000x190x000x180x000x160x000x0b0x000x040x030x000x010x020x000x0d0x0000x00.0x040x030x050x030x060x030x080x070x080x080x080x1a0x080x1b0x080x1c0x080x090x080x0a0x080x0b0x080x040x080x050x080x060x040x010x050x010x060x010x030x030x030x010x030x020x040x020x050x020x060x02...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:403) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-05-08T14:15:27.486+05:30  INFO 16836 --- [Booking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-08T14:15:27.488+05:30  INFO 16836 --- [Booking] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKING with eureka with status DOWN
+2025-05-08T14:15:27.488+05:30  INFO 16836 --- [Booking] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746693927488, current=DOWN, previous=UP]
+2025-05-08T14:15:27.489+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T14:15:27.492+05:30  INFO 16836 --- [Booking] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T14:15:27.498+05:30  INFO 16836 --- [Booking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T14:15:27.501+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T14:15:27.508+05:30  INFO 16836 --- [Booking] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T14:15:27.514+05:30  INFO 16836 --- [Booking] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-08T14:15:27.524+05:30  INFO 16836 --- [Booking] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-08T14:15:27.525+05:30  INFO 16836 --- [Booking] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-08T14:15:30.539+05:30  INFO 16836 --- [Booking] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-08T14:15:30.568+05:30  INFO 16836 --- [Booking] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - deregister  status: 200
+2025-05-08T14:15:30.569+05:30  INFO 16836 --- [Booking] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-08T14:15:32.446+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : Starting BookingApplication using Java 21.0.6 with PID 16836 (C:\Users\2401069\git\TravelPackageBooking\Booking\target\classes started by 2401069 in C:\Users\2401069\git\TravelPackageBooking\Booking)
+2025-05-08T14:15:32.447+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T14:15:32.449+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-08T14:15:32.449+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=Booking, profiles=[default], label=null, version=767bc270dd63bcb8401aeccf5f8e6e9df6854b18, state=
+2025-05-08T14:15:32.985+05:30  INFO 16836 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08T14:15:33.000+05:30  INFO 16836 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-05-08T14:15:33.094+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c007005f-cdc3-3c4e-9d7a-a40881aaf0b8
+2025-05-08T14:15:33.236+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4004 (http)
+2025-05-08T14:15:33.237+05:30  INFO 16836 --- [Booking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T14:15:33.238+05:30  INFO 16836 --- [Booking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T14:15:33.282+05:30  INFO 16836 --- [Booking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T14:15:33.282+05:30  INFO 16836 --- [Booking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 832 ms
+2025-05-08T14:15:33.455+05:30  INFO 16836 --- [Booking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-08T14:15:33.459+05:30  INFO 16836 --- [Booking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-08T14:15:33.471+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08T14:15:33.472+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-08T14:15:33.502+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b3122ef
+2025-05-08T14:15:33.503+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-08T14:15:33.515+05:30  WARN 16836 --- [Booking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08T14:15:33.515+05:30  INFO 16836 --- [Booking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-08T14:15:33.567+05:30  INFO 16836 --- [Booking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-08T14:15:33.590+05:30  INFO 16836 --- [Booking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T14:15:33.771+05:30  WARN 16836 --- [Booking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08T14:15:33.814+05:30  WARN 16836 --- [Booking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-08T14:15:33.838+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'TRAVELPACKAGE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T14:15:33.875+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERROLES' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T14:15:34.345+05:30  INFO 16836 --- [Booking] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-08T14:15:34.390+05:30  INFO 16836 --- [Booking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-08T14:15:34.419+05:30  WARN 16836 --- [Booking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-08T14:15:34.434+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-08T14:15:34.474+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-08T14:15:34.478+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-08T14:15:34.479+05:30  INFO 16836 --- [Booking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:15:34.479+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-08T14:15:34.479+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-08T14:15:34.480+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-08T14:15:34.480+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-08T14:15:34.480+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-08T14:15:34.480+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-08T14:15:34.480+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-08T14:15:34.525+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-08T14:15:34.526+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-08T14:15:34.526+05:30  INFO 16836 --- [Booking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-08T14:15:34.526+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746693934526 with initial instances count: 5
+2025-05-08T14:15:34.530+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING with eureka with status UP
+2025-05-08T14:15:34.531+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746693934531, current=UP, previous=STARTING]
+2025-05-08T14:15:34.531+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T14:15:34.534+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4004 (http) with context path '/'
+2025-05-08T14:15:34.535+05:30  INFO 16836 --- [Booking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4004
+2025-05-08T14:15:34.545+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T14:15:34.551+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : Started BookingApplication in 3.82 seconds (process running for 428.274)
+2025-05-08T14:15:34.553+05:30  INFO 16836 --- [Booking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-08T14:15:35.818+05:30  INFO 16836 --- [Booking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-05-08T14:15:35.819+05:30  INFO 16836 --- [Booking] [Thread-7] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKING with eureka with status DOWN
+2025-05-08T14:15:35.820+05:30  INFO 16836 --- [Booking] [Thread-7] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746693935820, current=DOWN, previous=UP]
+2025-05-08T14:15:35.820+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T14:15:35.821+05:30  INFO 16836 --- [Booking] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T14:15:35.826+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T14:15:35.828+05:30  INFO 16836 --- [Booking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T14:15:35.833+05:30  INFO 16836 --- [Booking] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T14:15:35.834+05:30  INFO 16836 --- [Booking] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-08T14:15:35.841+05:30  INFO 16836 --- [Booking] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-05-08T14:15:35.842+05:30  INFO 16836 --- [Booking] [Thread-7] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-08T14:15:38.853+05:30  INFO 16836 --- [Booking] [Thread-7] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-08T14:15:38.873+05:30  INFO 16836 --- [Booking] [Thread-7] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - deregister  status: 200
+2025-05-08T14:15:38.873+05:30  INFO 16836 --- [Booking] [Thread-7] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-08T14:15:39.744+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : Starting BookingApplication using Java 21.0.6 with PID 16836 (C:\Users\2401069\git\TravelPackageBooking\Booking\target\classes started by 2401069 in C:\Users\2401069\git\TravelPackageBooking\Booking)
+2025-05-08T14:15:39.744+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T14:15:39.746+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-08T14:15:39.746+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=Booking, profiles=[default], label=null, version=767bc270dd63bcb8401aeccf5f8e6e9df6854b18, state=
+2025-05-08T14:15:40.042+05:30  INFO 16836 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08T14:15:40.051+05:30  INFO 16836 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
+2025-05-08T14:15:40.147+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c007005f-cdc3-3c4e-9d7a-a40881aaf0b8
+2025-05-08T14:15:40.281+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4004 (http)
+2025-05-08T14:15:40.281+05:30  INFO 16836 --- [Booking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T14:15:40.281+05:30  INFO 16836 --- [Booking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T14:15:40.334+05:30  INFO 16836 --- [Booking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T14:15:40.334+05:30  INFO 16836 --- [Booking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 588 ms
+2025-05-08T14:15:40.488+05:30  INFO 16836 --- [Booking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-08T14:15:40.490+05:30  INFO 16836 --- [Booking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-08T14:15:40.499+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08T14:15:40.499+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-05-08T14:15:40.514+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@762d627a
+2025-05-08T14:15:40.514+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-05-08T14:15:40.526+05:30  WARN 16836 --- [Booking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08T14:15:40.526+05:30  INFO 16836 --- [Booking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-08T14:15:40.570+05:30  INFO 16836 --- [Booking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-08T14:15:40.592+05:30  INFO 16836 --- [Booking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T14:15:40.718+05:30  WARN 16836 --- [Booking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08T14:15:40.765+05:30  WARN 16836 --- [Booking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-08T14:15:40.792+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'TRAVELPACKAGE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T14:15:40.820+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERROLES' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T14:15:42.163+05:30  INFO 16836 --- [Booking] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-08T14:15:42.342+05:30  INFO 16836 --- [Booking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-08T14:15:42.439+05:30  WARN 16836 --- [Booking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-08T14:15:42.464+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-08T14:15:42.601+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-08T14:15:42.610+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-08T14:15:42.610+05:30  INFO 16836 --- [Booking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:15:42.618+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-08T14:15:42.618+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-08T14:15:42.618+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-08T14:15:42.618+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-08T14:15:42.618+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-08T14:15:42.618+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-08T14:15:42.618+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-08T14:15:42.708+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-08T14:15:42.708+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-08T14:15:42.708+05:30  INFO 16836 --- [Booking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-08T14:15:42.716+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746693942716 with initial instances count: 5
+2025-05-08T14:15:42.732+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING with eureka with status UP
+2025-05-08T14:15:42.732+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746693942732, current=UP, previous=STARTING]
+2025-05-08T14:15:42.732+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T14:15:42.740+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4004 (http) with context path '/'
+2025-05-08T14:15:42.748+05:30  INFO 16836 --- [Booking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4004
+2025-05-08T14:15:42.772+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T14:15:42.785+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : Started BookingApplication in 3.847 seconds (process running for 436.509)
+2025-05-08T14:15:42.789+05:30  INFO 16836 --- [Booking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-08T14:15:43.275+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T14:15:43.283+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T14:15:43.286+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-05-08T14:17:27.613+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-4] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:17:27.619+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-4] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:18:14.003+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:18:14.021+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:20:14.479+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-3] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:20:14.489+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-3] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:20:42.625+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:21:37.712+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:21:37.718+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:25:42.635+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:26:05.238+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-5] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:26:05.243+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-5] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:26:28.083+05:30  INFO 16836 --- [Booking] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-08T14:26:28.084+05:30  INFO 16836 --- [Booking] [Thread-13] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKING with eureka with status DOWN
+2025-05-08T14:26:28.084+05:30  INFO 16836 --- [Booking] [Thread-13] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746694588084, current=DOWN, previous=UP]
+2025-05-08T14:26:28.085+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T14:26:28.085+05:30  INFO 16836 --- [Booking] [Thread-13] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-08T14:26:28.092+05:30  INFO 16836 --- [Booking] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-08T14:26:28.096+05:30  INFO 16836 --- [Booking] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T14:26:28.098+05:30  INFO 16836 --- [Booking] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-05-08T14:26:28.100+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T14:26:28.105+05:30  INFO 16836 --- [Booking] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-05-08T14:26:28.105+05:30  INFO 16836 --- [Booking] [Thread-13] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-08T14:26:31.109+05:30  INFO 16836 --- [Booking] [Thread-13] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-08T14:26:31.127+05:30  INFO 16836 --- [Booking] [Thread-13] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - deregister  status: 200
+2025-05-08T14:26:31.127+05:30  INFO 16836 --- [Booking] [Thread-13] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-08T14:26:32.112+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : Starting BookingApplication using Java 21.0.6 with PID 16836 (C:\Users\2401069\git\TravelPackageBooking\Booking\target\classes started by 2401069 in C:\Users\2401069\git\TravelPackageBooking\Booking)
+2025-05-08T14:26:32.113+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : No active profile set, falling back to 1 default profile: "default"
+2025-05-08T14:26:32.116+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-08T14:26:32.117+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=Booking, profiles=[default], label=null, version=767bc270dd63bcb8401aeccf5f8e6e9df6854b18, state=
+2025-05-08T14:26:32.661+05:30  INFO 16836 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-08T14:26:32.693+05:30  INFO 16836 --- [Booking] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.
+2025-05-08T14:26:33.041+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c007005f-cdc3-3c4e-9d7a-a40881aaf0b8
+2025-05-08T14:26:33.563+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4004 (http)
+2025-05-08T14:26:33.568+05:30  INFO 16836 --- [Booking] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-08T14:26:33.569+05:30  INFO 16836 --- [Booking] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-08T14:26:33.742+05:30  INFO 16836 --- [Booking] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-08T14:26:33.742+05:30  INFO 16836 --- [Booking] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1625 ms
+2025-05-08T14:26:34.212+05:30  INFO 16836 --- [Booking] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-08T14:26:34.224+05:30  INFO 16836 --- [Booking] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-08T14:26:34.256+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-08T14:26:34.260+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-05-08T14:26:34.291+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bed3277
+2025-05-08T14:26:34.292+05:30  INFO 16836 --- [Booking] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-05-08T14:26:34.296+05:30  WARN 16836 --- [Booking] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-08T14:26:34.296+05:30  INFO 16836 --- [Booking] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-08T14:26:34.434+05:30  INFO 16836 --- [Booking] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-08T14:26:34.486+05:30  INFO 16836 --- [Booking] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-08T14:26:34.871+05:30  WARN 16836 --- [Booking] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-08T14:26:35.055+05:30  WARN 16836 --- [Booking] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-08T14:26:35.142+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'TRAVELPACKAGE' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T14:26:35.266+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'USERROLES' URL not provided. Will try picking an instance via load-balancing.
+2025-05-08T14:26:37.124+05:30  INFO 16836 --- [Booking] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-08T14:26:37.300+05:30  INFO 16836 --- [Booking] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-08T14:26:37.393+05:30  WARN 16836 --- [Booking] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-08T14:26:37.457+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-08T14:26:37.613+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-08T14:26:37.629+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-08T14:26:37.758+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-08T14:26:37.758+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-08T14:26:37.758+05:30  INFO 16836 --- [Booking] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-08T14:26:37.758+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746694597758 with initial instances count: 5
+2025-05-08T14:26:37.779+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKING with eureka with status UP
+2025-05-08T14:26:37.779+05:30  INFO 16836 --- [Booking] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746694597779, current=UP, previous=STARTING]
+2025-05-08T14:26:37.779+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004: registering service...
+2025-05-08T14:26:37.786+05:30  INFO 16836 --- [Booking] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4004 (http) with context path '/'
+2025-05-08T14:26:37.786+05:30  INFO 16836 --- [Booking] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4004
+2025-05-08T14:26:37.817+05:30  INFO 16836 --- [Booking] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKING/LTIN603872.cts.com:Booking:4004 - registration status: 204
+2025-05-08T14:26:37.849+05:30  INFO 16836 --- [Booking] [restartedMain] com.cts.BookingApplication               : Started BookingApplication in 6.646 seconds (process running for 1091.574)
+2025-05-08T14:26:37.864+05:30  INFO 16836 --- [Booking] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-08T14:27:31.560+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-08T14:27:31.560+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-08T14:27:31.561+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-08T14:27:31.563+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-1] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:27:31.570+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-1] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:29:29.236+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : Searching for booking details
+2025-05-08T14:29:29.241+05:30  INFO 16836 --- [Booking] [http-nio-4004-exec-8] com.cts.service.BookingServiceImpl       : Booking details found!!
+2025-05-08T14:31:37.636+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:36:37.640+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:41:37.644+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:46:37.652+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:51:37.656+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T14:56:37.673+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:01:37.684+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:06:37.685+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:11:37.701+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:16:37.708+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:21:37.714+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:26:37.725+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:31:37.732+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:50:20.482+05:30  WARN 16836 --- [Booking] [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=15m15s80ms796µs900ns).
+2025-05-08T15:51:22.809+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-08T15:56:22.817+05:30  INFO 16836 --- [Booking] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

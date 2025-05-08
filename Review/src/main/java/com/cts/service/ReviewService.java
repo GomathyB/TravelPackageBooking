@@ -17,4 +17,5 @@ public interface ReviewService {
 	public abstract List<Review> viewAllReview();
 	
 	public abstract ReviewUserDTOResponse viewUserById(int reviewId) throws UserNotFoundException;
+
 }

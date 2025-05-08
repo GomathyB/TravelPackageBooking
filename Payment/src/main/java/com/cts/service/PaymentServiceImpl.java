@@ -35,7 +35,7 @@ public class PaymentServiceImpl implements PaymentService {
 			Payment newPayment = repository.save(payment);
 			if (newPayment != null) {
 				booked.setStatus("Completed");
-				booked.setBookingId(bookingId);
+				//booked.setBookingId(bookingId);
 				bookingClient.updateBooking(booked);
 				log.info("New payment is added");
 
@@ -47,11 +47,18 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Override
 	public Payment viewPaymentById(int paymentId) throws PaymentIdNotFoundException {
+		log.info("Searching for payment details");
 		Optional<Payment> optional = repository.findById(paymentId);
 		if (optional.isPresent())
+		{
+			log.info("Payment details found!!");
 			return optional.get();
+		}
 		else
+		{
+			log.info("Payment details not found!! Payment ID invalid");
 			throw new PaymentIdNotFoundException("Payment ID is invalid");
+		}
 	}
 
 	@Override
