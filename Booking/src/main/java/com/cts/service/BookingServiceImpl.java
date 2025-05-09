@@ -51,8 +51,7 @@ public class BookingServiceImpl implements BookingService {
 			} else {
 				return "Availability is not sufficient";
 			}
-		}
-		else
+		} else
 			throw new PackageNotFoundException("Travel Package ID is invalid");
 	}
 
@@ -67,13 +66,10 @@ public class BookingServiceImpl implements BookingService {
 	public Booking viewBookingById(int bookingId) throws BookingIdNotFoundException {
 		log.info("Searching for booking details");
 		Optional<Booking> optional = repository.findById(bookingId);
-		if (optional.isPresent()) 
-		{
+		if (optional.isPresent()) {
 			log.info("Booking details found!!");
 			return optional.get(); // Displaying the existing package
-		}
-		else
-		{
+		} else {
 			log.info("Booking details not found!! Booking ID is invalid");
 			throw new BookingIdNotFoundException("Booking ID is invalid");
 		}
@@ -95,32 +91,27 @@ public class BookingServiceImpl implements BookingService {
 
 	@Override
 	public BookingUserResponse viewUserByBookingId(int bookingId) throws UserNotFoundException {
-		Booking booking=repository.findById(bookingId).get();
-		int userId=booking.getUserId();
-		UserRoles user=bookingUserClient.viewUserById(userId);
-		if(user!=null)
-		{
-			BookingUserResponse response=new BookingUserResponse(booking, user);
+		Booking booking = repository.findById(bookingId).get();
+		int userId = booking.getUserId();
+		UserRoles user = bookingUserClient.viewUserById(userId);
+		if (user != null) {
+			BookingUserResponse response = new BookingUserResponse(booking, user);
 			return response;
-		}
-		else
-		{
+		} else {
 			throw new UserNotFoundException("User ID not found");
 		}
 	}
 
 	@Override
-	public BookingPackageResponse viewPackageByBookingId(int bookingId) throws UserNotFoundException, PackageNotFoundException {
-		Booking booking=repository.findById(bookingId).get();
-		int packageId=booking.getPackageId();
-		TravelPackage travelPackage=packageClient.viewPackageById(packageId);
-		if(travelPackage!=null)
-		{
-			BookingPackageResponse response=new BookingPackageResponse(booking, travelPackage);
+	public BookingPackageResponse viewPackageByBookingId(int bookingId)
+			throws UserNotFoundException, PackageNotFoundException {
+		Booking booking = repository.findById(bookingId).get();
+		int packageId = booking.getPackageId();
+		TravelPackage travelPackage = packageClient.viewPackageById(packageId);
+		if (travelPackage != null) {
+			BookingPackageResponse response = new BookingPackageResponse(booking, travelPackage);
 			return response;
-		}
-		else
-		{
+		} else {
 			throw new PackageNotFoundException("Package ID is invalid");
 		}
 	}
