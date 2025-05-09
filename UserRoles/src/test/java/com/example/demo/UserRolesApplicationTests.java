@@ -66,7 +66,7 @@ class UserRolesApplicationTests {
 		assertEquals("gomathy04@gmail.com", response.getEmail());
 		Mockito.verify(repository, Mockito.times(1)).findById(userId);
 	}
-
+	@Test
 	void viewUserByInvalidId() {
 	    int userId = 999; //This ID doesn't exist
 	    // Mock repository behavior for findById() returning empty Optional

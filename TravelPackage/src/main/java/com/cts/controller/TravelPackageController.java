@@ -1,6 +1,7 @@
 package com.cts.controller;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -47,5 +48,20 @@ public class TravelPackageController {
 	public List<TravelPackage> viewAllPackage()
 	{
 		return service.viewAllPackage();
+	}
+	@GetMapping("/viewPacakageByPlace/{place}")
+	public List<TravelPackage> viewPacakageByPlace(@Valid @PathVariable String place)
+	{
+		return service.viewPacakageByPlace(place);
+	}
+	@GetMapping("/viewPackageByPriceLessOrEqual/{price}")
+	public List<TravelPackage> findByPriceLessThanOrEqual(@Valid @PathVariable int price)
+	{
+		return service.viewPackageByPriceLessOrEqual(price);
+	}
+	@GetMapping("/viewPacakgeBySortedReview")
+	public Set<TravelPackage> viewPacakgeBySortedReview()
+	{
+		return service.viewPacakgeBySortedReview();
 	}
 }

@@ -48,4 +48,9 @@ public class ReviewController {
 	{
 		return service.viewUserById(reviewId);
 	}
+	@GetMapping("/ratingSorted")
+	public List<Review> findByRatingSorted()
+	{
+		return service.findByRatingSorted();
+	}
 }

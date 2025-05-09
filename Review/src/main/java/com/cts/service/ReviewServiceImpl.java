@@ -79,6 +79,11 @@ public class ReviewServiceImpl implements ReviewService{
 			throw new UserNotFoundException("User ID not found");
 		}
 	}
+
+	@Override
+	public List<Review> findByRatingSorted() {
+		return repository.findByOrderByRatingDesc();
+	}
 	
 	
 

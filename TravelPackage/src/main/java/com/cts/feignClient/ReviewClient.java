@@ -15,6 +15,9 @@ public interface ReviewClient {
 	public List<Review> viewAllReview();
 	@DeleteMapping("/deleteReview/{rid}")
 	public String deleteReview(@PathVariable("rid") int reviewId);
+	@GetMapping("/ratingSorted")
+	public List<Review> findByRatingSorted();
+	
 
 
 }

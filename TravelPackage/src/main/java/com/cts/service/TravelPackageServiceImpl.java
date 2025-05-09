@@ -1,7 +1,9 @@
 package com.cts.service;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -78,6 +80,29 @@ public class TravelPackageServiceImpl implements TravelPackageService {
 	@Override
 	public List<TravelPackage> viewAllPackage() {
 		return repository.findAll();
+	}
+
+	@Override
+	public List<TravelPackage> viewPacakageByPlace(String place) {
+		return repository.findByPlace(place);
+	}
+
+	@Override
+	public List<TravelPackage> viewPackageByPriceLessOrEqual(int price) {
+		return repository.findByPriceLessThanEqual(price);
+	}
+
+	@Override
+	public Set<TravelPackage> viewPacakgeBySortedReview() {
+		List<Review> reviews=reviewClient.findByRatingSorted();	
+		Set<TravelPackage> packages = new HashSet<>();
+		for(Review review:reviews)
+		{
+			int packageId=review.getPackageId();
+			Optional<TravelPackage> packageOptional = repository.findById(packageId);
+	        packageOptional.ifPresent(packages::add); // if packageOptional does not have the object it does nothing
+		}
+		return packages;
 	}
 
 }
