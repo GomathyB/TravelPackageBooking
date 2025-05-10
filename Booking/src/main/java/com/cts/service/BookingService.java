@@ -24,4 +24,6 @@ public interface BookingService {
 	
 	public abstract BookingPackageResponse viewPackageByBookingId(int bookingId) throws UserNotFoundException, PackageNotFoundException;
 	
+	public abstract String cancelBooking(int bookingId) throws BookingIdNotFoundException, PackageNotFoundException ;
+	
 }

@@ -47,21 +47,25 @@ public class BookingController {
 	public List<Booking> viewAllBooking() {
 		return service.viewAllBooking();
 	}
-	
+
 	@PutMapping("/updateBooking")
-	public String  updateBooking(@Valid @RequestBody Booking booking)
-	{
+	public String updateBooking(@Valid @RequestBody Booking booking) {
 		return service.updateBooking(booking);
 	}
+
 	@GetMapping("/viewUserByBookingId/{bid}")
-	public BookingUserResponse viewUserByBookingId(@PathVariable("bid")int bookingId) throws UserNotFoundException
-	{
+	public BookingUserResponse viewUserByBookingId(@PathVariable("bid") int bookingId) throws UserNotFoundException {
 		return service.viewUserByBookingId(bookingId);
 	}
+
 	@GetMapping("/viewPackageByBookingId/{bid}")
-	public BookingPackageResponse viewPackageByBookingId(@PathVariable("bid")int bookingId) throws UserNotFoundException, PackageNotFoundException
-	{
+	public BookingPackageResponse viewPackageByBookingId(@PathVariable("bid") int bookingId)
+			throws UserNotFoundException, PackageNotFoundException {
 		return service.viewPackageByBookingId(bookingId);
 	}
-	
+	@PutMapping("/cancelBooking/{bid}")
+	public String cancelBooking(@PathVariable("bid")int bookingId) throws BookingIdNotFoundException, PackageNotFoundException {
+		return service.cancelBooking(bookingId);
+	}
+
 }

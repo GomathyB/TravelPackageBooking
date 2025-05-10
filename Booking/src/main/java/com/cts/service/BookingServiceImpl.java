@@ -20,6 +20,8 @@ import com.cts.feignclient.TravelPackageClient;
 import com.cts.model.Booking;
 import com.cts.repository.BookingRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class BookingServiceImpl implements BookingService {
 	@Autowired
@@ -116,4 +118,34 @@ public class BookingServiceImpl implements BookingService {
 		}
 	}
 
+	@Override
+	public String cancelBooking(int bookingId) throws BookingIdNotFoundException, PackageNotFoundException {
+		Booking booking=repository.findById(bookingId).get();
+		if(booking!=null)
+		{
+			booking.setStatus("Cancelled");
+			int noOfPeople=booking.getNoOfPeople();
+			int packageId=booking.getPackageId();
+			TravelPackage updatePackage=packageClient.viewPackageById(packageId);
+			if(updatePackage!=null)
+			{
+				int availability=updatePackage.getAvailability();
+				availability=availability+noOfPeople;
+				updatePackage.setAvailability(availability);
+				packageClient.updatePackage(updatePackage);
+				updateBooking(booking);
+				return "Booking Cancelled and availability increased";
+			}
+			else
+			{
+				throw new PackageNotFoundException("Package ID is invalid");
+			}
+			
+		}
+		else
+		{
+			throw new BookingIdNotFoundException("BookingId is invalid");
+		}
+	}
+	
 }
