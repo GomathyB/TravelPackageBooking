@@ -174,3 +174,77 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x80
 2025-05-10T22:18:22.081+05:30  INFO 21216 --- [UserRoles] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-10T22:23:22.115+05:30  INFO 21216 --- [UserRoles] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-05-10T22:30:57.098+05:30  WARN 21216 --- [UserRoles] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m5s843ms175µs500ns).
+2025-05-10T22:32:01.146+05:30  INFO 21216 --- [UserRoles] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T22:36:36.256+05:30  INFO 21216 --- [UserRoles] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-05-10T22:36:36.336+05:30  INFO 21216 --- [UserRoles] [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERROLES with eureka with status DOWN
+2025-05-10T22:36:36.338+05:30  INFO 21216 --- [UserRoles] [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746896796338, current=DOWN, previous=UP]
+2025-05-10T22:36:36.340+05:30  INFO 21216 --- [UserRoles] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERROLES/LTIN603872.cts.com:UserRoles:4000: registering service...
+2025-05-10T22:36:36.414+05:30  INFO 21216 --- [UserRoles] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERROLES/LTIN603872.cts.com:UserRoles:4000 - registration status: 204
+2025-05-10T22:36:36.441+05:30  INFO 21216 --- [UserRoles] [Thread-1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-10T22:36:36.494+05:30  INFO 21216 --- [UserRoles] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-10T22:36:36.611+05:30  INFO 21216 --- [UserRoles] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T22:36:36.684+05:30  INFO 21216 --- [UserRoles] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-10T22:36:36.713+05:30  INFO 21216 --- [UserRoles] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-10T22:36:36.719+05:30  INFO 21216 --- [UserRoles] [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-10T22:36:39.722+05:30  INFO 21216 --- [UserRoles] [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-10T22:36:39.778+05:30  INFO 21216 --- [UserRoles] [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERROLES/LTIN603872.cts.com:UserRoles:4000 - deregister  status: 200
+2025-05-10T22:36:39.781+05:30  INFO 21216 --- [UserRoles] [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-10T22:36:41.965+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.cts.UserRolesApplication             : Starting UserRolesApplication using Java 21.0.6 with PID 21216 (C:\Users\2401069\git\TravelPackageBooking\UserRoles\target\classes started by 2401069 in C:\Users\2401069\git\TravelPackageBooking\UserRoles)
+2025-05-10T22:36:41.966+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.cts.UserRolesApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-05-10T22:36:41.976+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-05-10T22:36:41.977+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=UserRoles, profiles=[default], label=null, version=767bc270dd63bcb8401aeccf5f8e6e9df6854b18, state=
+2025-05-10T22:36:44.907+05:30  INFO 21216 --- [UserRoles] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-10T22:36:44.978+05:30  INFO 21216 --- [UserRoles] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2025-05-10T22:36:45.469+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4e7f36ac-b425-366b-ab78-7f7f29e67ab9
+2025-05-10T22:36:46.176+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4000 (http)
+2025-05-10T22:36:46.185+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-10T22:36:46.186+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-10T22:36:46.432+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-10T22:36:46.433+05:30  INFO 21216 --- [UserRoles] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4455 ms
+2025-05-10T22:36:47.191+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-10T22:36:47.207+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-10T22:36:47.296+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-10T22:36:47.302+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-10T22:36:47.392+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4033e281
+2025-05-10T22:36:47.393+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-10T22:36:47.402+05:30  WARN 21216 --- [UserRoles] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-10T22:36:47.404+05:30  INFO 21216 --- [UserRoles] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.41
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-10T22:36:47.772+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-10T22:36:47.812+05:30  INFO 21216 --- [UserRoles] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-10T22:36:48.440+05:30  WARN 21216 --- [UserRoles] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-10T22:36:50.467+05:30  INFO 21216 --- [UserRoles] [restartedMain] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-05-10T22:36:50.539+05:30  WARN 21216 --- [UserRoles] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-10T22:36:50.621+05:30  INFO 21216 --- [UserRoles] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-10T22:36:50.757+05:30  WARN 21216 --- [UserRoles] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-10T22:36:50.817+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-05-10T22:36:51.019+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-10T22:36:51.026+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-10T22:36:51.026+05:30  INFO 21216 --- [UserRoles] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T22:36:51.027+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-10T22:36:51.027+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-10T22:36:51.027+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-10T22:36:51.027+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-10T22:36:51.027+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-10T22:36:51.027+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-10T22:36:51.027+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-10T22:36:51.142+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-10T22:36:51.143+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-10T22:36:51.144+05:30  INFO 21216 --- [UserRoles] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-10T22:36:51.145+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1746896811145 with initial instances count: 3
+2025-05-10T22:36:51.159+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERROLES with eureka with status UP
+2025-05-10T22:36:51.159+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1746896811159, current=UP, previous=STARTING]
+2025-05-10T22:36:51.159+05:30  INFO 21216 --- [UserRoles] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERROLES/LTIN603872.cts.com:UserRoles:4000: registering service...
+2025-05-10T22:36:51.168+05:30  INFO 21216 --- [UserRoles] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4000 (http) with context path '/'
+2025-05-10T22:36:51.175+05:30  INFO 21216 --- [UserRoles] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 4000
+2025-05-10T22:36:51.189+05:30  INFO 21216 --- [UserRoles] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERROLES/LTIN603872.cts.com:UserRoles:4000 - registration status: 204
+2025-05-10T22:36:51.227+05:30  INFO 21216 --- [UserRoles] [restartedMain] com.cts.UserRolesApplication             : Started UserRolesApplication in 10.73 seconds (process running for 35566.689)
+2025-05-10T22:36:51.233+05:30  INFO 21216 --- [UserRoles] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-10T22:41:51.037+05:30  INFO 21216 --- [UserRoles] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-10T22:46:51.053+05:30  INFO 21216 --- [UserRoles] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
