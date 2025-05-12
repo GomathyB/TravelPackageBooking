@@ -19,49 +19,50 @@ import com.cts.service.TravelPackageService;
 
 import jakarta.validation.Valid;
 
-@RestController
-@RequestMapping("/travelPackage")
+@RestController // Marks this class as a REST controller
+@RequestMapping("/travelPackage") // Defines the base URL mapping
 public class TravelPackageController {
+
 	@Autowired
-	TravelPackageService service;
-	@PostMapping("/addpackage")
-	public String addPackage(@Valid @RequestBody TravelPackage travelPackage)
-	{
+	TravelPackageService service; // Injects TravelPackageService
+
+	@PostMapping("/addpackage") // Adds a new travel package
+	public String addPackage(@Valid @RequestBody TravelPackage travelPackage) {
 		return service.addPackage(travelPackage);
 	}
-	@PutMapping("/updatePackage")
-	public String updatePackage(@Valid @RequestBody TravelPackage travelPackage)
-	{
+
+	@PutMapping("/updatePackage") // Updates an existing travel package
+	public String updatePackage(@Valid @RequestBody TravelPackage travelPackage) {
 		return service.updatePackage(travelPackage);
 	}
-	@DeleteMapping("/deletePackageById/{pid}")
-	public String deletePackageById( @PathVariable("pid") int packageId)
-	{
+
+	@DeleteMapping("/deletePackageById/{pid}") // Deletes a package by ID
+	public String deletePackageById(@PathVariable("pid") int packageId) {
 		return service.deletePackageById(packageId);
 	}
-	@GetMapping("/viewPackageById/{pid}")
-	public TravelPackage viewPackageById( @PathVariable("pid") int  packageId)throws PackageNotFoundException
-	{
+
+	@GetMapping("/viewPackageById/{pid}") // Retrieves a package by ID
+	public TravelPackage viewPackageById(@PathVariable("pid") int packageId) throws PackageNotFoundException {
 		return service.viewPackageById(packageId);
 	}
-	@GetMapping("/viewAllPackage")
-	public List<TravelPackage> viewAllPackage()
-	{
+
+	@GetMapping("/viewAllPackage") // Retrieves all available packages
+	public List<TravelPackage> viewAllPackage() {
 		return service.viewAllPackage();
 	}
-	@GetMapping("/viewPacakageByPlace/{place}")
-	public List<TravelPackage> viewPacakageByPlace(@Valid @PathVariable String place)
-	{
+
+	@GetMapping("/viewPacakageByPlace/{place}") // Retrieves packages by destination
+	public List<TravelPackage> viewPacakageByPlace(@Valid @PathVariable String place) {
 		return service.viewPacakageByPlace(place);
 	}
-	@GetMapping("/viewPackageByPriceLessOrEqual/{price}")
-	public List<TravelPackage> findByPriceLessThanOrEqual(@Valid @PathVariable int price)
-	{
+
+	@GetMapping("/viewPackageByPriceLessOrEqual/{price}") // Retrieves packages filtered by price
+	public List<TravelPackage> findByPriceLessThanOrEqual(@Valid @PathVariable int price) {
 		return service.viewPackageByPriceLessOrEqual(price);
 	}
-	@GetMapping("/viewPacakgeBySortedReview")
-	public Set<TravelPackage> viewPacakgeBySortedReview()
-	{
+
+	@GetMapping("/viewPacakgeBySortedReview") // Retrieves packages sorted by review ratings
+	public Set<TravelPackage> viewPacakgeBySortedReview() {
 		return service.viewPacakgeBySortedReview();
 	}
 }

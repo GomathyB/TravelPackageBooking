@@ -1,13 +1,8 @@
-package com.example.demo;
+package com.example.demo; // Defines the package for test cases
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -28,76 +23,77 @@ import com.cts.model.Payment;
 import com.cts.repository.PaymentRepository;
 import com.cts.service.PaymentServiceImpl;
 
-@SpringBootTest(classes=PaymentApplication.class)
+@SpringBootTest(classes = PaymentApplication.class) // Marks this as a Spring Boot test class
 class PaymentApplicationTests {
+
 	@Mock
-    private PaymentRepository repository;
+	private PaymentRepository repository; // Mock repository for Payment entity
 
-    @Mock
-    private BookingClient bookingClient;
+	@Mock
+	private BookingClient bookingClient; // Mock Feign Client for Booking interactions
 
-    @InjectMocks
-    private PaymentServiceImpl service;
-	
-    @Test
-    void testAddPayment_Success() throws BookingIdNotFoundException {
-        Payment payment = new Payment(1, 15,4000,"paid","Credit Card",4);
-        Booking booking = new Booking(1, 30,  LocalDate.parse("2025-05-11"), 
-        	    LocalDate.parse("2025-05-13"), "Pending",2,2,3);
+	@InjectMocks
+	private PaymentServiceImpl service; // Injects mocks into PaymentServiceImpl
 
-        when(bookingClient.viewBookingById(payment.getBookingId())).thenReturn(booking);
-        when(repository.save(payment)).thenReturn(payment);
+	@Test
+	void testAddPayment_Success() throws BookingIdNotFoundException {
+		Payment payment = new Payment(1, 15, 4000, "paid", "Credit Card", 4);
+		Booking booking = new Booking(1, 30, LocalDate.parse("2025-05-11"), LocalDate.parse("2025-05-13"), "Pending", 2,
+				2, 3);
 
-        String response = service.addPayment(payment);
-        assertEquals("Payment successfull!!", response);
+		when(bookingClient.viewBookingById(payment.getBookingId())).thenReturn(booking); // Mock booking retrieval
+		when(repository.save(payment)).thenReturn(payment); // Mock payment save operation
 
-        verify(bookingClient, times(1)).updateBooking(any(Booking.class));
-    }
-    
-    @Test
-    void testAddPayment_BookingNotFound() throws BookingIdNotFoundException {
-        Payment payment = new Payment(1, 15,4000,"paid","Credit Card",4);
+		String response = service.addPayment(payment);
+		assertEquals("Payment successfull!!", response); // Validate response
 
-        when(bookingClient.viewBookingById(payment.getBookingId())).thenReturn(null);
+		verify(bookingClient, times(1)).updateBooking(any(Booking.class)); // Ensure booking is updated
+	}
 
-        assertThrows(BookingIdNotFoundException.class, () -> service.addPayment(payment));
-        verify(repository, never()).save(any(Payment.class));
-    }
+	@Test
+	void testAddPayment_BookingNotFound() throws BookingIdNotFoundException {
+		Payment payment = new Payment(1, 15, 4000, "paid", "Credit Card", 4);
 
-    @Test
-    void testViewPaymentByValidId() throws PaymentIdNotFoundException {
-        int paymentId = 1;
-        Payment payment = new Payment(paymentId, 15,4000,"paid","Credit Card",4);
+		when(bookingClient.viewBookingById(payment.getBookingId())).thenReturn(null); // Simulate missing booking
 
-        when(repository.findById(paymentId)).thenReturn(Optional.of(payment));
+		assertThrows(BookingIdNotFoundException.class, () -> service.addPayment(payment)); // Verify exception thrown
+		verify(repository, never()).save(any(Payment.class)); // Ensure payment is not saved
+	}
 
-        Payment result = service.viewPaymentById(paymentId);
-        assertNotNull(result);
-        assertEquals(4000, result.getAmount());
+	@Test
+	void testViewPaymentByValidId() throws PaymentIdNotFoundException {
+		int paymentId = 1;
+		Payment payment = new Payment(paymentId, 15, 4000, "paid", "Credit Card", 4);
 
-        verify(repository, times(1)).findById(paymentId);
-    }
-    
-    @Test
-    void testViewPaymentByInvalidId() {
-        int paymentId = 999;
-        when(repository.findById(paymentId)).thenReturn(Optional.empty());
+		when(repository.findById(paymentId)).thenReturn(Optional.of(payment)); // Mock payment retrieval
 
-        assertThrows(PaymentIdNotFoundException.class, () -> service.viewPaymentById(paymentId));
-        verify(repository, times(1)).findById(paymentId);
-    }
+		Payment result = service.viewPaymentById(paymentId);
+		assertNotNull(result); // Validate response
+		assertEquals(4000, result.getAmount()); // Check payment amount
 
-    @Test
-    void testViewAllPayments() {
-        Payment payment1 = new Payment(1, 15,4000,"paid","Credit Card",4);
-        Payment payment2 = new Payment(2, 16,9000,"paid","GPay",5);
+		verify(repository, times(1)).findById(paymentId); // Ensure repository interaction
+	}
 
-        when(repository.findAll()).thenReturn(Arrays.asList(payment1, payment2));
+	@Test
+	void testViewPaymentByInvalidId() {
+		int paymentId = 999;
+		when(repository.findById(paymentId)).thenReturn(Optional.empty()); // Simulate invalid payment ID
 
-        List<Payment> payments = service.viewAllPayment();
-        assertEquals(2, payments.size());
+		assertThrows(PaymentIdNotFoundException.class, () -> service.viewPaymentById(paymentId)); // Verify exception
+																									// thrown
+		verify(repository, times(1)).findById(paymentId); // Ensure repository interaction
+	}
 
-        verify(repository, times(1)).findAll();
-    }
+	@Test
+	void testViewAllPayments() {
+		Payment payment1 = new Payment(1, 15, 4000, "paid", "Credit Card", 4);
+		Payment payment2 = new Payment(2, 16, 9000, "paid", "GPay", 5);
 
+		when(repository.findAll()).thenReturn(Arrays.asList(payment1, payment2)); // Mock retrieval of all payments
+
+		List<Payment> payments = service.viewAllPayment();
+		assertEquals(2, payments.size()); // Validate response size
+
+		verify(repository, times(1)).findAll(); // Ensure repository interaction
+	}
 }

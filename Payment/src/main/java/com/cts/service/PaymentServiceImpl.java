@@ -1,4 +1,4 @@
-package com.cts.service;
+package com.cts.service; // Defines the package for the Payment service implementation
 
 import java.util.List;
 import java.util.Optional;
@@ -15,47 +15,46 @@ import com.cts.feignclient.BookingClient;
 import com.cts.model.Payment;
 import com.cts.repository.PaymentRepository;
 
-@Service
+@Service // Marks this class as a service component for business logic
 public class PaymentServiceImpl implements PaymentService {
-	@Autowired
-	PaymentRepository repository;
 
 	@Autowired
-	BookingClient bookingClient;
-	Logger log = LoggerFactory.getLogger(PaymentServiceImpl.class);
+	PaymentRepository repository; // Injects PaymentRepository for database operations
+
+	@Autowired
+	BookingClient bookingClient; // Feign Client to interact with the Booking microservice
+
+	Logger log = LoggerFactory.getLogger(PaymentServiceImpl.class); // Logger for tracking operations
 
 	@Override
 	public String addPayment(Payment payment) throws BookingIdNotFoundException {
 		int bookingId = payment.getBookingId();
-		
-		Booking booked = bookingClient.viewBookingById(bookingId);
-		if (booked == null)
-			throw new BookingIdNotFoundException("Booking is not done ");
-		else {
-			Payment newPayment = repository.save(payment);
+
+		Booking booked = bookingClient.viewBookingById(bookingId); // Fetch booking details
+		if (booked == null) {
+			throw new BookingIdNotFoundException("Booking is not done");
+		} else {
+			Payment newPayment = repository.save(payment); // Saves payment record
 			if (newPayment != null) {
-				booked.setStatus("Completed");
-				//booked.setBookingId(bookingId);
-				bookingClient.updateBooking(booked);
+				booked.setStatus("Completed"); // Updates booking status
+				bookingClient.updateBooking(booked); // Updates booking details
 				log.info("New payment is added");
 
-				return "Payment successfull!!";
-			} else
+				return "Payment successful!!";
+			} else {
 				return "Something went wrong!!!";
+			}
 		}
 	}
 
 	@Override
 	public Payment viewPaymentById(int paymentId) throws PaymentIdNotFoundException {
 		log.info("Searching for payment details");
-		Optional<Payment> optional = repository.findById(paymentId);
-		if (optional.isPresent())
-		{
+		Optional<Payment> optional = repository.findById(paymentId); // Searches payment by ID
+		if (optional.isPresent()) {
 			log.info("Payment details found!!");
 			return optional.get();
-		}
-		else
-		{
+		} else {
 			log.info("Payment details not found!! Payment ID invalid");
 			throw new PaymentIdNotFoundException("Payment ID is invalid");
 		}
@@ -63,7 +62,6 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Override
 	public List<Payment> viewAllPayment() {
-		return repository.findAll();
+		return repository.findAll(); // Fetches all payment records
 	}
-
 }

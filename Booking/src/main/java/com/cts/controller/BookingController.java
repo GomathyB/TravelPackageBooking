@@ -1,16 +1,8 @@
-package com.cts.controller;
+package com.cts.controller; // Defines the package for the Booking Controller
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.cts.dto.BookingPackageResponse;
 import com.cts.dto.BookingUserResponse;
@@ -22,50 +14,52 @@ import com.cts.service.BookingServiceImpl;
 
 import jakarta.validation.Valid;
 
-@RestController
-@RequestMapping("/booking")
+@RestController // Marks this class as a REST Controller
+@RequestMapping("/booking") // Defines base URL mapping for booking-related operations
 public class BookingController {
-	@Autowired
-	BookingServiceImpl service;
 
-	@PostMapping("/addBooking")
-	public String addBooking(@Valid @RequestBody Booking booking) throws PackageNotFoundException {
-		return service.addBooking(booking);
-	}
+    @Autowired
+    BookingServiceImpl service; // Injects BookingServiceImpl to handle booking operations
 
-	@DeleteMapping("/deleteBooking/{bid}")
-	public String deleteBookingById(@PathVariable("bid") int bookingId) {
-		return service.deleteBookingById(bookingId);
-	}
+    @PostMapping("/addBooking") // Adds a new booking (POST request)
+    public String addBooking(@Valid @RequestBody Booking booking) throws PackageNotFoundException {
+        return service.addBooking(booking);
+    }
 
-	@GetMapping("/viewBookingById/{bid}")
-	public Booking viewBookingById(@PathVariable("bid") int bookingId) throws BookingIdNotFoundException {
-		return service.viewBookingById(bookingId);
-	}
+    @DeleteMapping("/deleteBooking/{bid}") // Deletes a booking by ID (DELETE request)
+    public String deleteBookingById(@PathVariable("bid") int bookingId) {
+        return service.deleteBookingById(bookingId);
+    }
 
-	@GetMapping("viewAllBooking")
-	public List<Booking> viewAllBooking() {
-		return service.viewAllBooking();
-	}
+    @GetMapping("/viewBookingById/{bid}") // Retrieves booking details by ID (GET request)
+    public Booking viewBookingById(@PathVariable("bid") int bookingId) throws BookingIdNotFoundException {
+        return service.viewBookingById(bookingId);
+    }
 
-	@PutMapping("/updateBooking")
-	public String updateBooking(@Valid @RequestBody Booking booking) {
-		return service.updateBooking(booking);
-	}
+    @GetMapping("/viewAllBooking") // Retrieves all booking records (GET request)
+    public List<Booking> viewAllBooking() {
+        return service.viewAllBooking();
+    }
 
-	@GetMapping("/viewUserByBookingId/{bid}")
-	public BookingUserResponse viewUserByBookingId(@PathVariable("bid") int bookingId) throws UserNotFoundException {
-		return service.viewUserByBookingId(bookingId);
-	}
+    @PutMapping("/updateBooking") // Updates booking details (PUT request)
+    public String updateBooking(@Valid @RequestBody Booking booking) {
+        return service.updateBooking(booking);
+    }
 
-	@GetMapping("/viewPackageByBookingId/{bid}")
-	public BookingPackageResponse viewPackageByBookingId(@PathVariable("bid") int bookingId)
-			throws UserNotFoundException, PackageNotFoundException {
-		return service.viewPackageByBookingId(bookingId);
-	}
-	@PutMapping("/cancelBooking/{bid}")
-	public String cancelBooking(@PathVariable("bid")int bookingId) throws BookingIdNotFoundException, PackageNotFoundException {
-		return service.cancelBooking(bookingId);
-	}
+    @GetMapping("/viewUserByBookingId/{bid}") // Fetches user details linked to a booking (GET request)
+    public BookingUserResponse viewUserByBookingId(@PathVariable("bid") int bookingId) throws UserNotFoundException {
+        return service.viewUserByBookingId(bookingId);
+    }
 
+    @GetMapping("/viewPackageByBookingId/{bid}") // Fetches package details linked to a booking (GET request)
+    public BookingPackageResponse viewPackageByBookingId(@PathVariable("bid") int bookingId)
+            throws UserNotFoundException, PackageNotFoundException {
+        return service.viewPackageByBookingId(bookingId);
+    }
+
+    @PutMapping("/cancelBooking/{bid}") // Cancels a booking (PUT request)
+    public String cancelBooking(@PathVariable("bid") int bookingId) 
+            throws BookingIdNotFoundException, PackageNotFoundException {
+        return service.cancelBooking(bookingId);
+    }
 }
