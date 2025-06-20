@@ -16,4 +16,6 @@ public interface PaymentService {
 
 	// Retrieves all payment records
 	public abstract List<Payment> viewAllPayment();
+	
+	public abstract String updatePayment(Payment payment);
 }

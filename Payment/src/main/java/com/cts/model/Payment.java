@@ -27,7 +27,7 @@ public class Payment {
 	@Min(value = 1000, message = "The minimum valid amount to pay is 1000") // Ensures minimum payment amount
 	private int amount; // Payment amount
 
-	@Pattern(regexp = "^(paid)$", message = "The status should be 'paid'") // Ensures valid payment status
+	//@Pattern(regexp = "^(paid)$", message = "The status should be 'paid'") // Ensures valid payment status
 	private String status; // Payment status (must be 'paid')
 
 	@NotBlank(message = "The payment method field cannot be empty") // Ensures payment method is provided

@@ -25,7 +25,7 @@ public class Booking {
     private LocalDate startDate; // Start date of the booking
     private LocalDate endDate; // End date of the booking
 
-    @Pattern(regexp = "^(Pending|Completed)$", message = "Status should be either Pending or Completed") // Ensures valid booking status
+    @Pattern(regexp = "^(Pending|Completed|Cancelled)$", message = "Status should be either Pending or Completed") // Ensures valid booking status
     private String status; // Booking status (Pending or Completed)
 
     private int paymentId; // Stores the payment ID associated with the booking

@@ -3,7 +3,13 @@ package com.cts.controller; // Defines the package for the Payment Controller
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.cts.exception.BookingIdNotFoundException;
 import com.cts.exception.PaymentIdNotFoundException;
@@ -32,5 +38,10 @@ public class PaymentController {
 	@GetMapping("/viewAllPayment") // Retrieves all payment records (GET request)
 	public List<Payment> viewAllPayment() {
 		return service.viewAllPayment();
+	}
+	@PutMapping("/updatePayment")
+	public String updatePayment(@RequestBody Payment payment) {
+		System.out.println("InSide Payment controller.."+payment);
+		return service.updatePayment(payment);
 	}
 }

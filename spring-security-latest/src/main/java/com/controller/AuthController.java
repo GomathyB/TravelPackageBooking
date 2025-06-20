@@ -1,5 +1,8 @@
 package com.controller;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,7 +24,7 @@ import com.service.UserService;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin("*")
+//@CrossOrigin("*")
 public class AuthController {
 
     @Autowired
@@ -52,7 +55,7 @@ public class AuthController {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
         if (authentication.isAuthenticated()) {
         	UserInfo obj = repo.findByName(authRequest.getUsername()).orElse(null);
-            return jwtService.generateToken(authRequest.getUsername(),obj.getRoles());
+            return jwtService.generateToken(authRequest.getUsername(),obj.getRoles(),obj.getId(),obj.getName());
         } else {
             throw new UsernameNotFoundException("invalid user request !");
         }
@@ -63,4 +66,15 @@ public class AuthController {
     {
     	return service.getRoles(username);
     }
+    @GetMapping("/getUserById/{id}")
+    public Optional<UserInfo> getUserById(@PathVariable("uid") int userId)
+	{
+		return service.getUserById(userId);
+	}
+    
+    @GetMapping("/getAllUsers")
+    public List<UserInfo> getAllUsers()
+	{
+		return service.getAllUsers();
+	}
 }

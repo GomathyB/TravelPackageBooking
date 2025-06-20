@@ -1,5 +1,8 @@
 package com.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -34,5 +37,15 @@ public class UserService {
 			return obj2.getRoles();
 		}
 		return "Not Found";
+	}
+	
+	public Optional<UserInfo> getUserById(int userId)
+	{
+		return repository.findById(userId);
+	}
+	
+	public List<UserInfo> getAllUsers()
+	{
+		return repository.findAll();
 	}
 }

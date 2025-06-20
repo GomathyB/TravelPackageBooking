@@ -82,7 +82,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
 							&& (method.equalsIgnoreCase("GET") || method.equalsIgnoreCase("POST")
 									|| method.equalsIgnoreCase("PUT") || method.equalsIgnoreCase("DELETE")))
 					|| (path.startsWith("/payment")
-							&& (method.equalsIgnoreCase("GET") || method.equalsIgnoreCase("POST")))
+							&& (method.equalsIgnoreCase("GET") || method.equalsIgnoreCase("POST") || method.equalsIgnoreCase("PUT")))
 					|| (path.startsWith("/review")
 							&& (method.equalsIgnoreCase("GET") || method.equalsIgnoreCase("POST"))));
 		}

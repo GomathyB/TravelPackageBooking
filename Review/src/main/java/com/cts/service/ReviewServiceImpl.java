@@ -27,6 +27,11 @@ public class ReviewServiceImpl implements ReviewService {
 
     Logger log = LoggerFactory.getLogger(ReviewServiceImpl.class); // Logger for tracking operations
 
+    /*
+     *This method inputs a review object
+     *Saves the review
+     *Returns a String
+     */
     @Override
     public String addReview(Review review) {
         Review newReview = repository.save(review); // Saves review record
@@ -38,6 +43,11 @@ public class ReviewServiceImpl implements ReviewService {
         }
     }
 
+    /*
+     *This method inputs a reviewId
+     *Deletes the review
+     *Returns a String
+     */
     @Override
     public String deleteReview(int reviewId) {
         repository.deleteById(reviewId);
@@ -45,6 +55,12 @@ public class ReviewServiceImpl implements ReviewService {
         return "Review deleted successfully!!!";
     }
 
+    /*
+     *This method inputs a reviewId
+     *Searches for the review
+     *If the review is not present it thorws ReviewNotFoundException
+     *Returns the review object
+     */
     @Override
     public Review viewReviewById(int reviewId) throws ReviewNotFoundException {
         Optional<Review> optional = repository.findById(reviewId); // Searches review by ID
@@ -58,11 +74,21 @@ public class ReviewServiceImpl implements ReviewService {
         }
     }
 
+    /*
+     *This method does not accept a input
+     *Retrieves all the reviews
+     *Returns a list of reviews
+     */
     @Override
     public List<Review> viewAllReview() {
         return repository.findAll(); // Fetches all review records
     }
 
+    /*
+     *This method inputs a reviewId
+     *Deletes the review
+     *Returns a String
+     */
     @Override
     public ReviewUserDTOResponse viewUserById(int reviewId) throws UserNotFoundException, ReviewNotFoundException {
         log.info("Searching for a review");

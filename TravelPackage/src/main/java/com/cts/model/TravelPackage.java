@@ -44,4 +44,6 @@ public class TravelPackage {
 	@Max(value = 50000, message = "The price should be at most 50000")
 	@Min(value = 1000, message = "The price should be at least 1000")
 	private int price; // Cost of the travel package
+	private String image;
+	private int userId;
 }

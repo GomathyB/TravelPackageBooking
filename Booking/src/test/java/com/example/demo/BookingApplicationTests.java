@@ -43,7 +43,7 @@ class BookingApplicationTests {
 	void setUp() {
 		MockitoAnnotations.openMocks(this); // Initializes the mocks
 		booking = new Booking(1, 100, LocalDate.of(2025, 5, 10), LocalDate.of(2025, 5, 15), "Pending", 10, 2, 1);
-		travelPackage = new TravelPackage(100, "Beach Vacation", "Luxury", "Goa", "Meals, Stay", 5, 20, 15000);
+		travelPackage = new TravelPackage(100, "Beach Vacation", "Luxury", "Goa", "Meals, Stay", 5, 20, 15000,"private String image;",20);
 	}
 
 	@Test
@@ -92,8 +92,8 @@ class BookingApplicationTests {
 	}
 
 	@Test
-	void testDeleteBookingById_Success() {
-		String result = bookingService.deleteBookingById(1);
+	void testDeleteBookingById_Success() throws BookingIdNotFoundException, PackageNotFoundException, PaymentIdNotFoundException {
+		String result = bookingService.cancelBookingById(1);
 
 		assertEquals("Booking deleted successfully!!!", result);
 		verify(repository, times(1)).deleteById(1); // Ensure deletion operation is triggered

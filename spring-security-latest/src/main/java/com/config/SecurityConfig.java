@@ -53,7 +53,7 @@ public class SecurityConfig {
                 // CUSTOMER access: GET access on travel packages, full CRUD on booking, payment (GET & POST), and review (GET & POST)
                 .requestMatchers(HttpMethod.GET, "/travelPackage/**", "/booking/**", "/payment/**", "/review/**").hasRole("CUSTOMER")
                 .requestMatchers(HttpMethod.POST, "/booking/**", "/payment/**", "/review/**").hasRole("CUSTOMER")
-                .requestMatchers(HttpMethod.PUT, "/booking/**").hasRole("CUSTOMER")
+                .requestMatchers(HttpMethod.PUT, "/booking/**,/payment/**").hasRole("CUSTOMER")
                 .requestMatchers(HttpMethod.DELETE, "/booking/**").hasRole("CUSTOMER")
 
                 .anyRequest().authenticated()

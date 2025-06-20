@@ -8,6 +8,7 @@ import com.cts.dto.BookingPackageResponse;
 import com.cts.dto.BookingUserResponse;
 import com.cts.exception.BookingIdNotFoundException;
 import com.cts.exception.PackageNotFoundException;
+import com.cts.exception.PaymentIdNotFoundException;
 import com.cts.exception.UserNotFoundException;
 import com.cts.model.Booking;
 import com.cts.service.BookingServiceImpl;
@@ -26,9 +27,9 @@ public class BookingController {
         return service.addBooking(booking);
     }
 
-    @DeleteMapping("/deleteBooking/{bid}") // Deletes a booking by ID (DELETE request)
-    public String deleteBookingById(@PathVariable("bid") int bookingId) {
-        return service.deleteBookingById(bookingId);
+    @PutMapping("/cancelBooking/{bid}")   // Deletes a booking by ID (DELETE request)
+    public String cancelBookingById(@PathVariable("bid") int bookingId) throws BookingIdNotFoundException , PackageNotFoundException , PaymentIdNotFoundException{
+        return service.cancelBookingById(bookingId);
     }
 
     @GetMapping("/viewBookingById/{bid}") // Retrieves booking details by ID (GET request)
@@ -57,9 +58,5 @@ public class BookingController {
         return service.viewPackageByBookingId(bookingId);
     }
 
-    @PutMapping("/cancelBooking/{bid}") // Cancels a booking (PUT request)
-    public String cancelBooking(@PathVariable("bid") int bookingId) 
-            throws BookingIdNotFoundException, PackageNotFoundException {
-        return service.cancelBooking(bookingId);
-    }
+    
 }

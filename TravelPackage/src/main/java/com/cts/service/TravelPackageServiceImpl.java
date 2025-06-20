@@ -27,6 +27,11 @@ public class TravelPackageServiceImpl implements TravelPackageService {
 
     Logger log = LoggerFactory.getLogger(TravelPackageServiceImpl.class); // Logger for tracking operations
 
+    /*
+     *This method inputs a TravelPackage object
+     *Saves the package
+     *Returns a String 
+     */
     @Override
     public String addPackage(TravelPackage travelPackage) {
         TravelPackage newTravelPackage = repository.save(travelPackage); // Saves travel package
@@ -38,6 +43,11 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         }
     }
 
+    /*
+     *This method inputs a TravelPackage object
+     *Updates the package
+     *Returns a String 
+     */
     @Override
     public String updatePackage(TravelPackage travelPackage) {
         TravelPackage updated = repository.save(travelPackage); // Updates travel package
@@ -49,6 +59,11 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         }
     }
 
+    /*
+     *This method inputs a packageId(int)
+     *Deletes the package along with its reviews from the review database
+     *Returns a String 
+     */
     @Override
     public String deletePackageById(int packageId) {
         boolean deleted = false;
@@ -68,6 +83,11 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         }
     }
 
+    /*
+     *This method inputs a packageId(int)
+     *Searches for the package
+     *Returns the package object 
+     */
     @Override
     public TravelPackage viewPackageById(int packageId) throws PackageNotFoundException {
         log.info("Searching for a Travel Package");
@@ -81,21 +101,41 @@ public class TravelPackageServiceImpl implements TravelPackageService {
         }
     }
 
+    /*
+     *This method does not accept a input
+     *Retrieve all the packages
+     *Returns a list of packages 
+     */
     @Override
     public List<TravelPackage> viewAllPackage() {
         return repository.findAll(); // Fetches all travel packages
     }
 
+    /*
+     *This method inputs a place(String)
+     *Searches for the package with the particular place
+     *Returns a list of packages 
+     */
     @Override
     public List<TravelPackage> viewPacakageByPlace(String place) {
         return repository.findByPlace(place); // Fetches packages by place
     }
 
+    /*
+     *This method inputs the price(int)
+     *Searches for package less than or equal
+     *Returns a list of packages
+     */
     @Override
     public List<TravelPackage> viewPackageByPriceLessOrEqual(int price) {
         return repository.findByPriceLessThanEqual(price); // Fetches packages filtered by price
     }
 
+    /*
+     *This method does not accept any input
+     *Sorts the package based on reviews
+     *Returns a set of packages
+     */
     @Override
     public Set<TravelPackage> viewPacakgeBySortedReview() {
         List<Review> reviews = reviewClient.findByRatingSorted(); // Retrieves reviews sorted by rating

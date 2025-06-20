@@ -7,15 +7,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.cts.dto.BookingPackageResponse;
 import com.cts.dto.BookingUserResponse;
+import com.cts.dto.Payment;
 import com.cts.dto.TravelPackage;
 import com.cts.dto.UserRoles;
 import com.cts.exception.BookingIdNotFoundException;
 import com.cts.exception.PackageNotFoundException;
+import com.cts.exception.PaymentIdNotFoundException;
 import com.cts.exception.UserNotFoundException;
 import com.cts.feignclient.BookingUserClient;
+import com.cts.feignclient.MailClient;
+import com.cts.feignclient.PaymentClient;
 import com.cts.feignclient.TravelPackageClient;
 import com.cts.model.Booking;
 import com.cts.repository.BookingRepository;
@@ -34,6 +39,12 @@ public class BookingServiceImpl implements BookingService {
 
 	@Autowired
 	BookingUserClient bookingUserClient; // Feign Client for fetching User details
+	
+	@Autowired
+	PaymentClient paymentClient;
+	
+	@Autowired
+	MailClient mailClient;
 
 	@Override
 	public String addBooking(Booking booking) throws PackageNotFoundException {
@@ -51,7 +62,10 @@ public class BookingServiceImpl implements BookingService {
 				if (newBooking != null) {
 					packageClient.updatePackage(travelPackage);
 					log.info("New Booking is added");
-					return "Booked package successfully!!";
+					String msg="Successfully booked a package for "+travelPackage.getPlace()+" for "+booking.getNoOfPeople()+" people. Enjoy your trip!!!";
+					mailClient.sendEmail("gomathybaskaran04@gmail.com", "Pack2Go Travel Pacakage Booking", msg);
+					String bookedMsg="Booked package successfully!! "+newBooking.getBookingId();
+					return bookedMsg;
 				} else {
 					return "Something went wrong!!!";
 				}
@@ -64,10 +78,55 @@ public class BookingServiceImpl implements BookingService {
 	}
 
 	@Override
-	public String deleteBookingById(int bookingId) {
-		repository.deleteById(bookingId);
-		log.info("A booking is deleted");
-		return "Booking deleted successfully!!!";
+	@Transactional
+	public String cancelBookingById(int bookingId) throws BookingIdNotFoundException, PackageNotFoundException, PaymentIdNotFoundException {
+		Optional<Booking> booking=repository.findById(bookingId);
+		if(booking.isPresent()) {
+			Booking booked=booking.get();
+			if(booked.getStatus().equals("Completed"))
+			{
+//				Changing the payment status to cancelled
+				Payment payment=paymentClient.viewPaymentById(booked.getPaymentId());
+				payment.setStatus("Cancelled");
+				System.out.println("Payment Object"+payment.getPaymentId()+" ,"+payment.getBookingId());
+				paymentClient.updatePayment(payment);	//------
+				
+				//Increasing the availability in the package
+				int no_of_people = booked.getNoOfPeople();
+				int packageId=booked.getPackageId();
+				TravelPackage travelPackage=packageClient.viewPackageById(packageId);
+				int availability=travelPackage.getAvailability();
+				availability+=no_of_people;
+				travelPackage.setAvailability(availability);
+				packageClient.updatePackage(travelPackage);
+				booked.setStatus("Cancelled");//---------
+				repository.save(booked);
+				log.info("A booking is updated");
+				return "Booking and payment cancelled";
+			}
+			else if(booked.getStatus().equals("Pending"))
+			{
+				//Increase the availability
+				int no_of_people=booked.getNoOfPeople();
+				int packageId=booked.getPackageId();
+				TravelPackage travelPackage=packageClient.viewPackageById(packageId);
+				int availability=travelPackage.getAvailability();
+				availability+=no_of_people;
+				travelPackage.setAvailability(availability);
+				packageClient.updatePackage(travelPackage);
+				booked.setStatus("Cancelled");// ------------
+				repository.save(booked);
+				//log.info("A booking is updated");
+//				return "Booking deleted successfully!!!";
+				return "Booking cancelled";
+			}	
+		}
+		else
+		{
+			throw new BookingIdNotFoundException("Booking ID is invalid");
+		}
+		return "Cancelled";
+		
 	}
 
 	@Override
@@ -120,25 +179,5 @@ public class BookingServiceImpl implements BookingService {
 		}
 	}
 
-	@Override
-	public String cancelBooking(int bookingId) throws BookingIdNotFoundException, PackageNotFoundException {
-		Booking booking = repository.findById(bookingId)
-				.orElseThrow(() -> new BookingIdNotFoundException("Booking ID is invalid"));
-
-		booking.setStatus("Cancelled");
-		int noOfPeople = booking.getNoOfPeople();
-		int packageId = booking.getPackageId();
-		TravelPackage updatePackage = packageClient.viewPackageById(packageId);
-
-		if (updatePackage != null) {
-			int availability = updatePackage.getAvailability();
-			availability += noOfPeople;
-			updatePackage.setAvailability(availability);
-			packageClient.updatePackage(updatePackage);
-			updateBooking(booking);
-			return "Booking Cancelled and availability increased";
-		} else {
-			throw new PackageNotFoundException("Package ID is invalid");
-		}
-	}
+	
 }

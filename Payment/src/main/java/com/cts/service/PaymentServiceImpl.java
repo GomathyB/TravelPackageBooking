@@ -7,11 +7,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.cts.dto.Booking;
 import com.cts.exception.BookingIdNotFoundException;
 import com.cts.exception.PaymentIdNotFoundException;
 import com.cts.feignclient.BookingClient;
+import com.cts.feignclient.MailClient;
 import com.cts.model.Payment;
 import com.cts.repository.PaymentRepository;
 
@@ -23,6 +25,9 @@ public class PaymentServiceImpl implements PaymentService {
 
 	@Autowired
 	BookingClient bookingClient; // Feign Client to interact with the Booking microservice
+	
+	@Autowired
+	MailClient mailClient;
 
 	Logger log = LoggerFactory.getLogger(PaymentServiceImpl.class); // Logger for tracking operations
 
@@ -36,7 +41,11 @@ public class PaymentServiceImpl implements PaymentService {
 		} else {
 			Payment newPayment = repository.save(payment); // Saves payment record
 			if (newPayment != null) {
+				int paymentId=newPayment.getPaymentId();
+				booked.setPaymentId(paymentId);
 				booked.setStatus("Completed"); // Updates booking status
+				String msg="You have successfully paid "+newPayment.getAmount()+" through "+newPayment.getPaymentMethod()+". Enjoy your trip!!! Share your experince by leaving reviews in the website";
+				mailClient.sendEmail("gomathybaskaran04@gmail.com", "Pack2Go Travel Pacakage Booking", msg);
 				bookingClient.updateBooking(booked); // Updates booking details
 				log.info("New payment is added");
 
@@ -63,5 +72,12 @@ public class PaymentServiceImpl implements PaymentService {
 	@Override
 	public List<Payment> viewAllPayment() {
 		return repository.findAll(); // Fetches all payment records
+	}
+
+	@Override
+	@Transactional
+	public String updatePayment(Payment payment) {
+		repository.save(payment);
+		return "Payment updated";
 	}
 }

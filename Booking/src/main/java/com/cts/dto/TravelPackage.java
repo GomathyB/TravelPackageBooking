@@ -16,4 +16,6 @@ public class TravelPackage {
     private int noOfDays; // Duration of the trip in days
     private int availability; // Available slots for booking
     private int price; // Cost of the package
+    private String image;
+    private int userId;
 }

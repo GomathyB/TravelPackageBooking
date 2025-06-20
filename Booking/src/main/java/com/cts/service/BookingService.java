@@ -6,6 +6,7 @@ import com.cts.dto.BookingPackageResponse;
 import com.cts.dto.BookingUserResponse;
 import com.cts.exception.BookingIdNotFoundException;
 import com.cts.exception.PackageNotFoundException;
+import com.cts.exception.PaymentIdNotFoundException;
 import com.cts.exception.UserNotFoundException;
 import com.cts.model.Booking;
 
@@ -15,7 +16,7 @@ public interface BookingService {
 	public abstract String addBooking(Booking booking) throws PackageNotFoundException;
 
 	// Deletes a booking by its ID
-	public abstract String deleteBookingById(int bookingId);
+	public abstract String cancelBookingById(int bookingId) throws BookingIdNotFoundException , PackageNotFoundException , PaymentIdNotFoundException ;
 
 	// Retrieves booking details by ID, throws exception if ID is not found
 	public abstract Booking viewBookingById(int bookingId) throws BookingIdNotFoundException;
@@ -35,7 +36,6 @@ public interface BookingService {
 	public abstract BookingPackageResponse viewPackageByBookingId(int bookingId)
 			throws UserNotFoundException, PackageNotFoundException;
 
-	// Cancels a booking by its ID, throws exceptions if booking or package is not
-	// found
-	public abstract String cancelBooking(int bookingId) throws BookingIdNotFoundException, PackageNotFoundException;
+	
+	
 }

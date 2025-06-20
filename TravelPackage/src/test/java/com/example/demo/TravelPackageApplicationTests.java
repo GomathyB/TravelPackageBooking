@@ -37,7 +37,7 @@ class TravelPackageApplicationTests {
 	@Test
 	void testAddPackage() {
 		TravelPackage packageObj = new TravelPackage(1, "Trip to Kochi", "Family trip", "Kochi",
-				"Food, Stay, Travel, Site Seeing", 5, 20, 3000);
+				"Food, Stay, Travel, Site Seeing", 5, 20, 3000,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz4SuYOQ9RrUODnCLmFVHrO3h_vMXNoM-BGg&s",20);
 		when(repository.save(packageObj)).thenReturn(packageObj); // Mock package save operation
 
 		String response = service.addPackage(packageObj);
@@ -47,7 +47,7 @@ class TravelPackageApplicationTests {
 	@Test
 	void testUpdatePackage() {
 		TravelPackage packageObj = new TravelPackage(1, "Trip to Kochi", "Family trip", "Kochi",
-				"Food, Stay, Travel, Site Seeing", 5, 20, 3000);
+				"Food, Stay, Travel, Site Seeing", 5, 20, 3000,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz4SuYOQ9RrUODnCLmFVHrO3h_vMXNoM-BGg&s",20);
 		when(repository.save(packageObj)).thenReturn(packageObj); // Mock package update operation
 
 		String response = service.updatePackage(packageObj);
@@ -87,7 +87,7 @@ class TravelPackageApplicationTests {
 	void testViewPackageByValidId() throws PackageNotFoundException {
 		int packageId = 1;
 		TravelPackage packageObj = new TravelPackage(1, "Trip to Kochi", "Family trip", "Kochi",
-				"Food, Stay, Travel, Site Seeing", 5, 20, 3000);
+				"Food, Stay, Travel, Site Seeing", 5, 20, 3000,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz4SuYOQ9RrUODnCLmFVHrO3h_vMXNoM-BGg&s",20);
 		when(repository.findById(packageId)).thenReturn(Optional.of(packageObj)); // Mock retrieval by ID
 
 		TravelPackage response = service.viewPackageById(packageId);
@@ -109,9 +109,9 @@ class TravelPackageApplicationTests {
 	@Test
 	void testViewAllPackage() {
 		TravelPackage package1 = new TravelPackage(1, "Trip to Kochi", "Family trip", "Kochi",
-				"Food, Stay, Travel, Site Seeing", 5, 20, 3000);
+				"Food, Stay, Travel, Site Seeing", 5, 20, 3000,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz4SuYOQ9RrUODnCLmFVHrO3h_vMXNoM-BGg&s",20);
 		TravelPackage package2 = new TravelPackage(2, "Trip to Saudi Arabia", "International trip", "Saudi Arabia",
-				"Food, Stay, Travel, Site Seeing", 2, 20, 30000);
+				"Food, Stay, Travel, Site Seeing", 2, 20, 30000,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz4SuYOQ9RrUODnCLmFVHrO3h_vMXNoM-BGg&s",20);
 		when(repository.findAll()).thenReturn(Arrays.asList(package1, package2)); // Mock retrieval of all packages
 
 		List<TravelPackage> packages = service.viewAllPackage();

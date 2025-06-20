@@ -17,7 +17,11 @@ public class UserRolesServiceImpl implements UserRolesService {
 	@Autowired
 	UserRolesRepository repository;// Injecting the repository to interact with the database
 	Logger log = LoggerFactory.getLogger(UserRolesServiceImpl.class);// Logger for tracking operations
-
+	/*
+	 * This method inputs the UserRoles object
+	 * Save the user
+	 * Returns a String
+	 */
 	@Override
 	public String addUser(UserRoles user) {
 		UserRoles saved = repository.save(user);
@@ -27,7 +31,11 @@ public class UserRolesServiceImpl implements UserRolesService {
 		} else
 			return "Something went wrong!!!";
 	}
-
+	/*
+	 * This method inputs a user object
+	 * Updates the user
+	 * Returns a string
+	 */
 	@Override
 	public String updateUser(UserRoles user) {
 		UserRoles updated = repository.save(user);
@@ -38,6 +46,11 @@ public class UserRolesServiceImpl implements UserRolesService {
 			return "Something went wrong!!!";
 	}
 
+	/*
+	 * This method inputs a userId(int)
+	 * Deletes a user
+	 * Returns a string
+	 */
 	@Override
 	public String deleteUser(int userId) {
 		repository.deleteById(userId);
@@ -45,6 +58,11 @@ public class UserRolesServiceImpl implements UserRolesService {
 		return "User deleted successfully!!!";
 	}
 
+	/*
+	 * This method inputs a userId(int)
+	 * Searches for the user
+	 * Returns the user
+	 */
 	@Override
 	public UserRoles viewUserById(int userId) throws UserNotFoundException {
 		Optional<UserRoles> optional = repository.findById(userId);
